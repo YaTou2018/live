@@ -1,0 +1,128 @@
+/*客户端桌面共享组件公用样式*/
+  %programm-share {
+    width: 3.22*100px;
+    height: 2.88*100px;
+    z-index: 120;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: .14*100px;
+    .programm-share-title {
+      width: 100%;
+      height: .44*100px;
+      position: relative;
+      text-align: center;
+      .programm-share-name {
+        width: 100%;
+        font-size: 14px;
+        font-weight: normal;
+        color: #fff;
+        margin: 0;
+        height: 44px;
+        line-height: 44px;
+      }
+    }
+    .programm-share-body {
+      width: 3.14*100px;
+      height: 2.4*100px;
+      margin-left: 1.5%;
+      border-radius: 0 0 .12*100px .12*100px;
+      padding: .26*100px 5% 0;
+      display: flex;
+      justify-content: center;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .screen_width_tip {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: .8*100px;
+        text-align: center;
+        color: #FF3535;
+        font-size: .14*100px;
+      }
+
+
+      /*因为波波bug暂时 增加margin-left：10%*/
+      .programm-share-item {
+        height: 1.28*100px;
+        width: 50%;
+      }
+      .programm-share-item-box {
+        width: 1.04*100px;
+        margin: 0 auto;
+        height: 1.28*100px;
+        position: relative;
+        cursor: pointer;
+      }
+      .programm-share-btn {
+        display: inline-block;
+        font-size: 0.14*100px;
+        width: 100%;
+        height: 0.25*100px;
+        line-height: 0.25*100px;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0.2*100px;
+        margin: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.change-width {
+          width: 1.56*100px;
+        }
+      }
+    }
+
+    /*区域共享*/
+    .area-share-img {
+      width: 100%;
+      height: 100%;
+      background-size: 0.8*100px 0.8*100px;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+    /*桌面共享*/
+    .screen-share-img {
+      width: 100%;
+      height: 100%;
+      background-size: 0.8*100px 0.8*100px;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+    /*开始共享按钮*/
+    .programm-share-start-btn {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0.24*100px;
+      margin: auto;
+      font-size: 0.16*100px;
+      color: #fff;
+      width: 1.23*100px;
+      height: 0.4*100px;
+      text-align: center;
+      line-height: 0.4*100px;
+      border-radius: .05*100px;
+      background: #268EFA;
+    }
+    /*关闭按钮*/
+    .programm-share-close {
+      background-size: 100% 100%;
+      position: absolute;
+      top: .15*100px;
+      right: .22*100px;
+      float: right;
+      width: 0.13*100px;
+      height: 0.13*100px;
+    }
+  }

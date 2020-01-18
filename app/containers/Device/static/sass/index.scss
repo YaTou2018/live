@@ -1,0 +1,90 @@
+.main_device_setting{
+    width:690px;
+    font-size: 14px;;
+    background:#82ABEC;
+    border-radius:14px;
+    position: fixed;
+    left: 50%;
+    top:45%;
+    transform: translate(-345px,-282px);
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border:1px solid #82ABEC;
+    /*标题*/
+    .device_header{
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-size:18px;
+        .icon{
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            line-height: 13px;
+            right: 30px;
+            top: 20px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+    .device_main{
+        flex:1;
+        overflow: hidden;
+        padding:40px;
+        box-sizing:border-box;
+        display:flex;
+        background: #fff;
+
+    }
+    /*主题内容*/
+    .device_content{
+        flex:1;
+        width:618px;
+        // height:502px;
+        position: relative;
+        border-radius:26px;
+    }
+}
+
+/*开始设备检测*/
+.main_device_testing{
+    width:628px;
+    font-size: 14px;;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    /*主题内容*/
+    .device_content{
+        // width:618px;
+        margin-top: 19px;
+        height: 530px;
+        background: #fff;
+        padding: 40px 64px;
+        box-sizing:border-box;
+        border-radius:26px;
+        box-sizing: border-box;
+        position: relative;
+        &>div:nth-child(1){
+            .option-all{
+                z-index: 1;
+            }
+        }
+        &>div:nth-child(3){
+            .footer_btn .btn{
+                white-space: nowrap;
+                width: 1.5rem;
+            }
+        }
+    }
+}
+
+.video-mirror{
+    transform: rotateY(180deg);
+}

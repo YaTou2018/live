@@ -1,0 +1,196 @@
+/*弹框*/
+.modal-wrapper{
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 999;
+    width: 100%;
+    height:100%;    
+
+    .modal-box{
+        width: 338px;
+        height: 198px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        font-size: 18px;
+        // border: 4px solid #268EFA;
+        overflow: hidden;
+        border-radius: 26px;
+        transform: translate(-50%,-50%);
+        box-shadow:0px 4px 15px 0px rgba(0,0,0,0.3);
+        background-color: #fff;
+
+    }
+    .modal-title{
+        width: 100%;
+        border-radius: 6px 6px 0 0;
+        position: relative;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        background-color: #82ABEC;
+
+        .title-text{
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .title-close {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+    }
+    .modal-contant{
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #fff;
+        color: #6F6F6F;
+        padding: 0 45px;
+        .warning{
+            color: #CA5B75;
+        }
+    }
+    .modal-footer{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0 0 12px 12px;
+        background-color: #fff;
+        padding: 0 65px;
+        box-sizing:border-box;
+        display: flex;
+        justify-content: center;
+        margin-top: -1px;
+        button{
+            flex: 1;
+            display: block;
+            height: 50px;
+            color: #FFFFFF;
+            transition: top 0.3s linear 0s;
+            width:142px;
+            height:34px;
+            background:rgba(90,140,220,1);
+            border-radius:19px;
+            font-size:18px;
+            line-height:34px;
+            &.ok-btn{
+                background: #5A8CDC;
+                color: #FFE895;
+                border:2px solid #eee;
+                box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+                &:active {
+                    background: #336CC7;
+                    box-shadow:inset 2px 2px 4px rgba(0,0,0,.2);
+
+                }
+            }
+            &.cancle-btn{
+                margin-right: 14px;
+                background: #97B7EB;
+                color: #FFE895;
+                border:2px solid #eee;
+                box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+                &:active {
+                    background: rgba(90, 140, 220, 1);
+                    box-shadow:inset 2px 2px 4px rgba(0,0,0,.2);
+                }
+            }
+            &.disabled-btn{
+                background: #EDF1F5;
+                color: #5E5E5E;
+                &:hover {
+                    background: #EDF1F5;
+                }
+                &:active {
+                    background: #EDF1F5;
+                }
+            }
+        }
+    }
+    /* 通知/公告*/
+    &.custom-wrapper{
+        position: absolute;
+        .modal-box{
+            width: 470px;
+            height: auto;
+        }
+        .modal-contant{
+            padding:53px 65px 20px;
+            height: auto;
+            text-align: left;
+            color: #6D7278;
+            font-size:14px;
+            textarea{
+                margin-top: 15px;
+                padding: 15px;
+                height: 145px;
+                background: #DEEAFF;
+                border-radius:15px;
+            }
+        }
+        .modal-footer{
+            margin-bottom:45px;
+        }
+    }
+    &.add-bg{
+        //background-color: rgba(0, 0, 0, 0.5)
+    }
+}
+
+.modal-wrapper-mobile {
+    .modal-wrapper{
+        top: 44px;
+        background: rgba(0,0,0,.5);
+        padding:10px;
+        box-sizing: border-box;
+        .modal-box{
+            width: 70%;
+            height: auto;
+            border: 1px solid #DDDDEA;
+            background: #fff;
+            border-radius:8px;
+            .modal-title{
+                display: none;
+            }
+            .modal-contant{
+                color: #3D3E41;
+                font-size: 24px;
+                padding: 0 28px;
+            }
+            .modal-footer{
+                padding: 0 28px;
+                font-size: 24px;
+                &.ok-btn{
+                    background: #306FFF;
+                    box-shadow:0px 5px 14px 0px rgba(200,208,255,0.9);
+                    &:hover {
+                        background: #306FFF;
+                    }
+                    &:active {
+                        background: #306FFF;
+                    }
+                }
+                &.cancle-btn{
+                    margin-right: 14px;
+                    background: #F7F8FA;
+                    color: #3D3E41;
+                    &:hover {
+                        background: #F7F8FA;
+                    }
+                    &:active {
+                        background: #F7F8FA;
+                    }
+                }
+            }
+        }
+    }
+}
+

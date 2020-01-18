@@ -1,0 +1,18 @@
+.textarea-item {
+    display: inline-block;
+    margin: 0;
+    padding: 16px 0 0 16px;
+    border-radius: 3px;
+    border: 1px solid #E3E5ED;
+    width: 100%;
+    line-height: 24px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #3D3E41;
+    resize: none;
+    &:focus {
+        outline: none;
+        outline-offset: -2px;
+    }
+}

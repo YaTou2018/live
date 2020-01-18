@@ -1,0 +1,88 @@
+.header {
+  height: 44px;
+  line-height: 60px;
+  padding: 0 26px 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #82ABEC;
+  align-items:center;
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size:14px;
+    color:#fff;
+    &>div {
+        color: #fff;
+        margin:0 16px;
+
+    }
+  }
+  .header_right{
+    display:flex;
+    align-items: center;
+    height: 100%;
+    >div{
+      width:40px;
+      height:40px;
+      margin:0 10px;
+      border-radius:50%;
+    }
+    .allFull{
+      background:url(../img/fullscreen_icon_before.png) no-repeat center;
+      background-size:cover;
+      &:active{
+        background:url(../img/fullscreen_icon_after.png) no-repeat center;
+        background-size:cover;
+      }
+    }
+    .exitFullScreen{
+      width:40px;
+      height:40px;
+      background:url(../img/exitFullScreenBefore1.png) no-repeat center;
+      background-size:cover;
+      &:active{
+        background:url(../img/exitFullScreenAfter1.png) no-repeat center;
+        background-size:cover;
+      }
+    }
+    .deviceSetting{
+      background:url(../img/deviceSettingbefore.png);
+      background-size:cover;
+      &:active{
+        background:url(../img/deviceSettingAfter.png) no-repeat center;
+        background-size:cover;
+      }
+    }
+    .switch-layout-btn{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      overflow: hidden;
+      &.on{
+        background: url(../img/layout1.png) no-repeat center;
+        background-size:cover;
+        &:active{
+          background:url(../img/layout2.png) no-repeat center;
+          background-size:cover;
+        }
+      }
+      &.off{
+       
+        background: url(../img/layout_two_before2.png) no-repeat center;
+        background-size:cover;
+        &:active{
+          background:url(../img/layout_two2.png) no-repeat center;
+          background-size:cover;
+          // margin-top:4px;
+        }
+      }
+    }
+  }
+  .h-time-wrap{
+    font-size:14px;
+    color:#fff;
+  }
+}

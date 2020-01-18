@@ -1,0 +1,412 @@
+/*新版课件库*/
+@import "./themes";
+
+.courseware-box {
+    position: absolute;
+    height: 500px;
+    top: 0;
+    left: 77px;
+    z-index: 300;
+    border-radius: 15px;
+    width:440px;
+    background:rgba(90,140,220,0.96);
+    opacity: 0.96;
+    display: none;
+    .triangle {
+        display: block;
+        position: absolute;
+        top: 78px;
+        left: -20px;
+        width:0;
+        height:0;
+        border-top:10px solid transparent;
+        border-bottom:26px solid transparent;
+        border-right:26px solid rgba(90,140,220,0.96);
+        opacity: 0.96;
+      }
+    /*右侧课件列表*/
+    .courseware_content{
+        width: 100%;
+        overflow: hidden;
+        display: inline-block;
+        height: 100%;
+        border-radius: 0.150rem;
+        .fileFilter{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 62px;
+            position: relative;
+
+            .flexBox{
+                display: flex;
+                align-items: center;
+
+                .filterItem{
+                    margin-left: 20px;
+                    color:#FFE895;
+                    cursor: pointer;
+                    display: flex;
+                    .flex_box{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 7px;
+
+                        .up{
+                            width: 7px;
+                            height: 5px;
+                            margin-bottom: 3px;
+                            background: url("../img/up_default.png") no-repeat center;
+                        }
+                        .down{
+                            width: 7px;
+                            height: 5px;
+                            background: url("../img/dwon_default.png") no-repeat center;
+                        }
+                    }
+
+                    &.active{
+                        color: #268EFA;
+                        .up.on{
+                            background: url("../img/up_selected.png") no-repeat center;
+                        }
+                        .down.off{
+                            background: url("../img/dwon_selected.png") no-repeat center;
+                        }
+                    }
+
+                    &.searching{
+                        display: inline-block;
+                        width: 2.4rem;
+                        height: 0.35rem;
+                        background:rgba(244,239,255,0.2);
+                        line-height: 0.35rem;
+                        border-radius: 0.18rem;
+                        padding-left: 0.12rem;
+
+                        input{
+                            width: 75%;
+                            border: none;
+                            margin-left: 0.15rem;
+                            outline:medium;
+                            height: 100%;
+                            background: rgba(244,239,255,0)
+                        }
+                    }
+                }
+            }
+
+            .addCourse,.addPPTCourse,.addH5{
+                width: 118px;
+                height: 42px;
+                border-radius: 6px;
+                color: #FFE895;
+                border: 1px solid #FFE895;
+                margin: 0 8px;
+                font-size:13px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .promptbox_ppt{
+                width:90%;
+                height:246px;
+                background:rgba(255,255,255,1);
+                border-radius:26px;
+                position: absolute;
+                top:114px;
+                left:5%;
+                padding:11px 26px 31px;
+                box-sizing:border-box;
+                z-index:9;
+            }
+            .promptbox_ppt_close{
+                width:24px;
+                height:24px;
+                background:url(../img/ppt_close_btn.png) no-repeat center;
+                background-size:cover;
+                margin-left:auto;
+            }
+            .text_wrong_ppt{
+                font-size:14px;
+                color:rgba(90,140,220,1);
+                line-height:20px;
+                margin:16px 0 22px 0;
+            }
+            .wrang_bottom_btn{
+                width:100%;
+                display:flex;
+                align-items: center;
+                justify-content:space-between;
+                text-align: center;
+                p{
+                    width:100px;
+                    font-size:14px;
+                    color:rgba(90,140,220,1);
+                    display: flex;
+                    align-items:center;
+                    span{
+                        display: inline-block;
+                        width:18px;
+                        height:18px;
+                        margin-left:10px;
+                        margin-right:5px;
+                        background:url(../img/nocheck.png) no-repeat center;
+                        background-size:cover;
+                        &.checked{
+                            background: url(../img/checkd.png) no-repeat center;
+                            background-size:cover;
+                        }
+                    }
+                }
+                button{
+                    flex:1;
+                    width:141px;
+                    height:34px;
+                    background:rgba(90,140,220,1);
+                    border-radius:19px;
+                    border:2px solid #97B7EB;
+                    box-shadow:2px 2px 4px rgba(0,0,0,.2);
+                    font-size:18px;
+                    color:rgba(255,232,149,1);
+                    line-height:28px;
+                }
+            }
+        }
+        .fileContainer{
+            margin-top: 15px;
+            height: calc(100% - 77px);
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .fileItem{
+                padding: 0 25px 0 16px;
+                height: 54px;
+                color: #fff;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                cursor: pointer;
+
+                &.hide{
+                    display: none;
+                }
+                .fileListIcon{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                }
+                .fileListTest{
+                    width: 300px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    height: 100%;
+                    line-height: 52px;
+                    font-size: 16px;
+                    align-items: center;
+                    margin:0 15px;
+                    color:#FFE895;
+                }
+                .whiteboard{
+                    background: url("../img/baiban.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .pptx{
+                    background: url("../img/ppt.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .word{
+                    background: url("../img/word.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .pdf{
+                    background: url("../img/pdf.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .html{
+                    background: url("../img/icon_html.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .excle{
+                    background: url("../img/excle.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .png{
+                    background: url("../img/pic.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .txt{
+                    background: url("../img/txt.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .zip{
+                    background: url("../img/icon_h5.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .undefined{
+                    background: url("../img/icon_unknow.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .mp3{
+                    background: url("../img/icon_mp3.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .mp4{
+                    background: url("../img/icon_mp4.png") no-repeat center;
+                    background-size: 100%;
+                }
+                .closeIcon{
+                    width: 26px;
+                    height: 17px;
+                    display: inline-block;
+                    cursor: pointer;
+                    background-repeat:no-repeat;
+                    background-position:center; 
+                    background-size: 100%; 
+                    background-image: url("../img/close eye_default.png");
+                    &:hover{
+                        background-image: url("../img/close eye_hover.png");
+                    }
+                    &:active{
+                        background-image: url("../img/open eye_press.png");
+                    }
+                    &.on{
+                        background-image: url("../img/open eye_press.png");
+                        pointer-events: none;
+                        cursor: default !important;
+                    }
+                    &.mp3, &.mp4{
+                        background-image: url("../img/play_default.png");
+                        background-size: 100% 100%; 
+                        &:hover{
+                            background-image: url("../img/play_hover.png");
+                        }
+                        &:active{
+                            background-image: url("../img/play_press.png");
+                        }
+                        &.on{
+                            background-image: url("../img/pause_press.png");
+                            pointer-events: none;
+                            cursor: default !important;
+                        }
+                        &.pause{
+                            background-image: url("../img/play_hover.png");
+                        }
+                    }
+                }
+                .deleteIcon{
+                    width: 22px;
+                    height: 24px;
+                    margin-left: 30px;
+                    display: inline-block;
+                    cursor: pointer;
+                    background: url("../img/delete_default.png") no-repeat center;
+                    background-size: 100%;
+
+                    &:hover{
+                        background: url("../img/delete_hover.png") no-repeat center;
+                        background-size: 100%;
+                    }
+                    &:active{
+                        background: url("../img/delete_hover.png") no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+            }
+            &.media .fileItem .closeIcon{
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                cursor: pointer;
+                background-repeat:no-repeat;
+                background-position:center; 
+                background-size: 100%; 
+                background-image: url("../img/play_default.png");
+                &:hover{
+                    background-image: url("../img/play_hover.png");
+                }
+                &:active{
+                    background-image: url("../img/play_press.png");
+                }
+                &.on{
+                    background-image: url("../img/pause_default.png");
+                    pointer-events: none;
+                    cursor: default !important;
+                    &:hover,&:active{
+                        background-image: url("../img/pause_default.png");
+                    }
+                }
+            }
+
+            /*课件按文件夹分类,配置项*/
+            .classification{
+                width: 100%;
+                height: 0.36rem;
+                line-height: 0.36rem;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 0.14rem;
+                padding-left: 0.1rem;
+                .arrow{
+                    display: inline-block;
+                    width: 0.12rem;
+                    height: 0.12rem;
+                    margin: 0.12rem 0.13rem 0 0;
+                    float: right;
+                    background-size: 100%;
+                    &.on{
+                        background-size: 100%;
+                    }
+                }
+            }
+
+            /*滚动条*/
+            &::-webkit-scrollbar-thumb{
+                width: 4px;
+                border-radius: 2px;
+                background: #B6DAFF;
+                opacity: 0.7;
+            }
+            &::-webkit-scrollbar{
+                width: 4px;
+                border-radius: 2px;
+                background: rgba(255,255,255,0.1)
+            }
+
+            /*课件上传样式*/
+            .progress-bar-box{
+                width: 100%;
+                height: 20px;
+                color: #fff;
+                background: #82ABEC;
+                position: relative;
+                margin-top: 2px;
+                .progress-bar{
+                    display: inline-block;
+                    background: #97B7EB;
+                    height: 100%;
+                    line-height: 20px;
+
+                    .curr-progress{
+                        width: 428px;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                }
+                .cancel-file-upload{
+                    width: 10px;
+                    height: 10px;
+                    background: url("../img/close_press@2x.png") no-repeat center;
+                    background-size: 100%;
+                    position: absolute;
+                    right: 32px;
+                    top:5px;
+                }
+            }
+        }
+    }
+}

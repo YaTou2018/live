@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?uoyg89');
+  src:  url('fonts/icomoon.eot?uoyg89#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?uoyg89') format('truetype'),
+    url('fonts/icomoon.woff?uoyg89') format('woff'),
+    url('fonts/icomoon.svg?uoyg89#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-E3E4EB:before {
+  content: "\ab01";
+  color: #e3e4eb;
+}
+.icon-E3E4EB_selected:before {
+  content: "\ab02";
+  color: #e3e4eb;
+}
+.icon-000000:before {
+  content: "\ab03";
+}
+.icon-000000_selected:before {
+  content: "\ab04";
+}
+.icon-058CE5:before {
+  content: "\ab05";
+  color: #2aa7ff;
+}
+.icon-058CE5_selected:before {
+  content: "\ab06";
+  color: #2aa7ff;
+}
+.icon-contral:before {
+  content: "\ab07";
+  color: #306fff;
+}
+.icon-contral_bg .path1:before {
+  content: "\ab08";
+  color: rgb(189, 192, 211);
+  opacity: 0.4;
+}
+.icon-contral_bg .path2:before {
+  content: "\ab09";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5626;
+}
+.icon-contral_bg .path3:before {
+  content: "\ab0a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5626;
+}
+.icon-contral_bg .path4:before {
+  content: "\ab0b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5626;
+}
+.icon-contral_bg .path5:before {
+  content: "\ab0c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5626;
+}
+.icon-contral_bg .path6:before {
+  content: "\ab0d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5626;
+}
+.icon-56A648:before {
+  content: "\ab0e";
+  color: #49c636;
+}
+.icon-56A648_selected:before {
+  content: "\ab0f";
+  color: #49c636;
+}
+.icon-pen_default:before {
+  content: "\ab10";
+  color: #898b98;
+}
+.icon-pen_press:before {
+  content: "\ab11";
+  color: #306fff;
+}
+.icon-FF0000:before {
+  content: "\ab12";
+  color: #f00;
+}
+.icon-FF0000_selected:before {
+  content: "\ab13";
+  color: #f00;
+}
+.icon-text_default:before {
+  content: "\ab14";
+  color: #898b98;
+}
+.icon-text_press:before {
+  content: "\ab15";
+  color: #306fff;
+}
+.icon-xiangpi_default:before {
+  content: "\ab16";
+  color: #898b98;
+}
+.icon-xiangpi_press:before {
+  content: "\ab17";
+  color: #306fff;
+}
+.icon-D25FFA:before {
+  content: "\ab18";
+  color: #d25ffa;
+}
+.icon-D25FFA_selected:before {
+  content: "\ab19";
+  color: #d25ffa;
+}

@@ -1,0 +1,612 @@
+.mask {
+  position: absolute;
+  top: 0.42*100px;
+  z-index: 500;
+  height: 100%;
+  width: 100%;
+}
+
+
+.navbar-container li .userlist-container {
+  color: #FFE895;
+  position: absolute;
+  top: 0;
+  left: 76px;
+  z-index: 350;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  width:440px;
+  height:500px;
+  background:rgba(90,140,220,1);
+  opacity:0.96;
+  display: none;
+
+  .triangle {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: -20px;      
+    width:0;
+    height:0;
+    border-top:10px solid transparent;
+    border-bottom:26px solid transparent;
+    border-right:26px solid rgba(90,140,220,1);
+    opacity:0.96;
+  }
+  &>.device-control{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 570px;
+    height: 480px;
+    transform: translateX(-50%) translateY(-50%);
+    background: #82ABEC;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 351;
+    box-shadow: 0 0 0 2px #82abec;
+    .control-header{
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: #FFFFFF;
+      >i{
+        position: absolute;
+        right: 20px;
+      }
+    }
+    .device-ops-wrapper{
+      background: #ffffff;
+      position: relative;
+      height: calc(100% - 40px);
+      .ops-tip{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      &>.option-all{
+        clear: both;
+        display: flex;
+        line-height: 40px;
+        height: 40px;
+        padding: 20px;
+        margin: 20px 0;
+        &:nth-child(1){
+          margin-top: 0;
+          &>.item_right{
+            z-index: 3;
+          }
+        }
+        &:nth-child(2){
+          &>.item_right{
+            z-index: 2;
+          }
+        }
+        &:nth-child(3){
+          &>.item_right{
+            z-index: 1;
+          }
+        }
+        .item_left{
+            // width: 50px;
+            color:#5A8CDC;
+            font-size:14px;
+            width: 80px;
+            .playImg{
+                width:48px;
+                height:48px;
+                // background:url(../img/playMusic.png) no-repeat center center;
+                background-size:cover;
+            }
+
+        }
+        &>.item_right{
+            flex: 1;
+            height:40px;
+            margin-left:10px;
+            &>.select_text{
+              height: 100%;
+            }
+            .sound-vol{
+              justify-content:normal;
+              display: flex;
+              .tool-slider_img{
+                width:22px;
+                height:18px;
+                background:url(../image/yinliang@2x.png) no-repeat center center;
+                background-size:cover;
+              }
+              .icon_volume{
+                  width: 10px;
+                  height: 10px;
+                  color: #268efa;
+                  font-size: 10px;
+                  display: inline-block;
+              }
+              .txt_volume{
+                  font-size: 13px;
+                  color: #268EFA;
+              }
+              .rc-slider{
+                  width: 224px;
+                  margin: 0 8px;
+                  height: 24px;
+                  .rc-slider-rail{
+                      height: 6px;
+                      background: #E8E9ED;
+                      border-radius: 4px;
+                      top: 10px;
+                  }
+                  .rc-slider-track{
+                      height: 6px;
+                      background: #5A8CDC;
+                      border-radius: 4px;
+                      top: 10px;
+                  }
+                  .rc-slider-handle{
+                      width:14px;
+                      height:14px;
+                      background:#fff;
+                      box-shadow:0px 0px 4px 0px rgba(130,150,199,0.54);
+                      top: 6px
+                  }
+              }
+          }
+        }        
+    }
+      .ops-list{
+        width: 100%;
+        max-height: 3.6rem;
+        overflow: auto;
+        color: #C1B3E7;
+        
+        &::-webkit-scrollbar {/*滚动条整体样式*/
+          width: 2px;     /*高宽分别对应横竖滚动条的尺寸*/
+          height: 1px;
+          position: relative;
+          right: 40px;
+          }
+        &::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 1px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: #535353;
+        }
+        &::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 1px;
+            background: #EDEDED;
+        }
+        li{
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+          cursor: pointer;
+          border-radius:6px;
+          .icon{
+            width: .17rem;
+            position: absolute;
+            left: .17rem;
+            top: 0.12rem;
+            font-size: 0.12rem;
+          }
+          .name{
+            display: block;
+            width: 100%;
+            text-align: center;
+            line-height: .44rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          &:hover{
+            background: #336CC7;
+            opacity: 0.5;
+            color: #FFFFFF;
+          }
+          &.active{
+            background: #336CC7;
+            color: #FFFFFF;
+            &:hover{
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .device-result-btn{
+        position: absolute;
+        bottom: 0.6rem;
+        right: 0.34rem;
+        width: 1.23rem;
+        height: .4rem;
+        line-height: 0.4rem;
+        color: #fff;
+        background: #336CC7;
+        border-radius: .25rem;
+      }
+    }
+    
+  }
+  //分页
+  .paging-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0.1rem;
+    height: 30px;
+    padding: 15px;
+    .paging-left,.paging-right{
+        display: block;
+        width:0;
+        height:0;
+        border-top:10px solid transparent;
+        border-bottom:10px solid transparent;
+        border-right:10px solid #FFE895;
+        opacity: 0.8;
+        cursor: pointer;
+        padding: 0 10px 0;
+        &:hover {
+          opacity: 0.96;
+        }
+        &:active {
+        }
+        &.disabled {
+          opacity: .5;
+        }
+    }
+    .paging-left {
+        margin-right: 0.2rem;
+    }
+    .paging-right {
+        margin-left: 0.2rem;
+        transform: rotateY(180deg);
+    }
+    .paging-container-info {
+        display: flex;
+        font-size: 0.14rem;
+        align-items: center;
+        justify-content: center;
+        .paging-input {
+            display: block;
+            font-size: 0.13rem;
+            line-height: 0.24rem;
+            border-radius: 0.14rem;
+            background-color: transparent;
+            width: 0.48rem;
+            height: 0.24rem;
+            border: 0.01rem solid #FFFFFF;
+            text-align: center;
+            outline: none;
+            margin-right: 0.13rem;
+
+            &:focus {
+            }
+        }
+        .paging-sum {
+            margin-left: 0.1rem;
+        }
+    }
+}
+  .userlist-title {
+    font-size: .14*100px;
+    min-width: .79*100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.2*100px;
+    display: flex;
+    align-items: center;
+    .userlist-search {
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+        color: #ccc;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */  
+        color: #ccc;
+      }
+      :-ms-input-placeholder { /* IE 10+ */ 
+       color: #ccc;
+      }
+      :-moz-placeholder { /* Firefox 18- */ 
+       color: #ccc;
+      }
+      input{
+          margin-left: 30px;
+          outline-style: none ;
+          border: 1px solid #82ABEC; 
+          border-radius: 50px;
+          padding: 10px 14px;
+          width: 420px;
+          font-size: 14px;
+          font-family: "Microsoft soft";
+          background: #5A8CDC;
+      }
+    }
+  }
+
+  .list-box {
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+    padding-bottom: 20px;
+    li {
+      margin: 0.04*100px 0.1*100px 0.04*100px 0.08*100px;
+      padding: 0 0.1*100px;
+      display: flex;
+      width: calc(100% - 0.2*100px);
+      height: .44*100px;
+      line-height: .44*100px;
+      align-items: center;
+      border-radius: 0.05*100px;
+      position: relative;
+      &>.tips{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: #ec7259;
+          color: #fff;
+          opacity: 0.8;
+          width: 100%;
+          z-index: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      &:hover {
+        background: #5A8CDC;
+      }
+      .ys-icon-after-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 240px;
+        margin-left: auto;
+        .ys-icon-after {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          margin-right: 10px;
+          background-size: 100% 100% !important;
+          cursor: pointer;
+          &.icon-user_xiajiangtai {
+            background: url('../image/icon-user_xiajiangtai.png') no-repeat center center;
+          }
+          &.icon-user_xiajiangtai_disabled {
+            background: url('../image/icon-user_xiajiangtai_disabled.png') no-repeat center center !important;
+          }
+          &.icon-user_xiajiangtai_reverse {
+            background: url('../image/icon-user_xiajiangtai_reverse.png') no-repeat center center;
+          }
+
+          &.icon-user_close_camera {
+            background: url('../image/icon-user_close_camera.png') no-repeat center center ;
+          }
+          &.icon-user_close_camera_disabled {
+            background: url('../image/icon-user_close_camera_disabled.png') no-repeat center center ;
+          }
+          &.icon-user_close_camera_reverse {
+            background: url('../image/icon-user_close_camera_reverse.png') no-repeat center center ;
+          }
+
+          &.icon-user_close_maikefeng {
+            background: url('../image/icon-user_close_maikefeng.png') no-repeat center center ;
+          }
+          &.icon-user_close_maikefeng_disabled {
+            background: url('../image/icon-user_close_maikefeng_disabled.png') no-repeat center center ;
+          }
+          &.icon-user_close_maikefeng_reverse {
+            background: url('../image/icon-user_close_maikefeng_reverse.png') no-repeat center center ;
+          }
+
+          &.icon-user_close_shouquan {
+            background: url('../image/icon-user_close_shouquan.png') no-repeat center center;
+          }
+          &.icon-user_close_shouquan_disabled {
+            background: url('../image/icon-user_close_shouquan_disabled.png') no-repeat center center;
+          }
+          &.icon-user_close_shouquan_reverse {
+            background: url('../image/icon-user_close_shouquan_reverse.png') no-repeat center center;
+          }
+
+          &.icon-user_jinyan {
+            background: url('../image/icon-user_jinyan.png') no-repeat center center;
+          }
+          &.icon-user_jinyan_disabled {
+            background: url('../image/icon-user_jinyan_disabled.png') no-repeat center center;
+          }
+          &.icon-user_jinyan_reverse {
+            background: url('../image/icon-user_jinyan_reverse.png') no-repeat center center;
+          }
+
+          &.icon-user_remove {
+            background: url('../image/icon-user_remove.png') no-repeat center center;
+          }
+          &.icon-user_remove_disabled {
+            background: url('../image/icon-user_remove_disabled.png') no-repeat center center;
+          }
+        }
+      }
+    }
+
+    .li-padding-left {
+      padding: 0 0.1*100px;
+    }
+
+    .user-list-item-name {
+      font-size: .14*100px;
+      margin-left: .15*100px;
+      width: 2.17*100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .ys-icon-before {
+      width: .32*100px;
+      height: .32*100px;
+      background-size: 100% 100%;
+      position: relative;
+      .user-remote-list-container{
+        position: absolute;
+        top: 0;
+        left: 35px;
+        width: 120px;
+        z-index: 351;
+        // height: 180px;
+        padding-left: 0.1rem;
+        background:rgba(222,234,255,0.8);
+        color:#82ABEC;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius:8px;
+        height: auto;
+        .triangle {
+          display: block;
+          position: absolute;
+          top: 6px;
+          left: -10px;      
+          width:0;
+          height:0;
+          border-top:0.1rem solid transparent;
+          border-bottom:0.1rem solid transparent;
+          border-right:0.1rem solid rgba(222,234,255,0.8);
+      }
+        .add-nowrap{
+          display: flex;
+          align-items: center;
+          height: 40px;
+         
+          &:hover{
+            color:#5A8CDC;
+            cursor: pointer;
+          }
+        }
+      }
+      &.netWindowPc {
+        background-image: url('../image/icon_win_explorer.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_win_explorer_error.png');
+        }
+      }
+
+      &.netMacPc {
+        background-image: url('../image/icon_mac_explorer.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_mac_explorer_error.png');
+        }
+      }
+
+      &.netIPad {
+        background-image: url('../image/icon_ipad.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_ipad_error.png');
+        }
+      }
+
+      &.netWindowClient {
+        background-image: url('../image/icon_win.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_win_error.png');
+        }
+      }
+
+      &.netMacClient {
+        background-image: url('../image/icon_imac.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_imac_error.png');
+        }
+      }
+
+      &.netIPhone {
+        background-image: url('../image/icon_iphone.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_iphone_error.png');
+        }
+      }
+
+      &.netAndroid {
+        background-image: url('../image/icon_Androidphone.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_Androidphone_error.png');
+        }
+      }
+
+      &.netAndroidPad {
+        background-image: url('../image/icon_Androidpad.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_Androidpad_error.png');
+        }
+      }
+
+      &.netAndroidTV {
+        background-image: url('../image/icon_TV.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_TV_error.png');
+        }
+      }
+
+      &.unknownDevice {
+        background-image: url('../image/icon_unknow.png');
+
+        &.udp-notOnceSuccess {
+          background-image: url('../image/icon_unknow_error.png');
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: .04*100px;
+      /*高宽分别对应横竖滚动条的尺寸*/
+    }
+
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: .04*100px;
+      -webkit-box-shadow: inset 0 0 .05*100px #717171;
+      background: #717171;
+    }
+
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      background: transparent
+    }
+  }
+
+  .content-min-height {
+    min-height: 1.9*100px;
+  }
+}
+
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}

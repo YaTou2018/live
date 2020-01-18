@@ -1,0 +1,84 @@
+.student-video{
+  width: calc((100vw - 4.22rem) / 6 - 0.05rem);
+  margin: 0.05rem 0 0.05rem 0.05rem;
+  z-index: 250;
+  .base-video{
+    width: 100%;
+    position: relative;
+    background-color: #E8EAEF;
+    .isInBackGround{
+      position: absolute;
+      white-space: nowrap;
+      top: 50%;
+      left: 50%;
+      z-index: 600;
+      color: #fff;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      &>i{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        color: #cccccc;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #FFE895;
+        margin-right: 5px;
+      }
+    }
+  }
+  .base-video.four-to-three{
+    padding-top: 75%;
+  }
+  .base-video.sixteen-to-nine{
+    padding-top: 56.25%;
+  }
+}
+.four-to-three .other-video-btn-mask:hover button{
+  width: calc((100% + 0.24rem) / 6);
+  height: calc(16% * 4 / 3);
+}
+.sixteen-to-nine .other-video-btn-mask:hover button{
+  width: calc((100% + 0.24rem) / 8);
+  height: calc(12.5% * 16 / 9);
+}
+.sidebar .student-video-list .student-video{
+  width: auto;
+  margin-left: 0;
+}
+.section .student-video .other-video-btn-mask{
+  padding: 0 12px;
+}
+.section .student-video .other-video-btn-mask:hover button{
+  margin: 0 6px 6px 6px;
+}
+.student-video .gift-number{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.student-video-list,.student-video-list.two-rows{
+  & .student-video.full-screen-video{
+    position: fixed;
+    top: 0.44rem;
+    left: 0;
+    margin: 0;
+    width: calc(100% - 4.22rem);
+    // 高度 = 总高度 - 头部高度 - （底部视频高度）
+    height: calc(100vh - 0.44rem - (((100vw - 4.22rem) / 6 - 0.05rem) * 3 / 4 + 0.1rem));
+    .base-video{
+      height: 100%;
+      padding: 0;
+      position: initial;
+      .other-video-btn-mask{
+        transform: none;
+        align-items: center;
+      }
+    }
+  }
+}
+

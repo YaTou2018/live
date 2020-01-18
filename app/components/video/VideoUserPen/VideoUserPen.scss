@@ -1,0 +1,13 @@
+.VideoUserPen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    padding: 8px;
+    &>.icon-tool_pencil{
+        font-size: 20px;
+        &:before {
+            content: "\e331";
+        }
+    }
+}

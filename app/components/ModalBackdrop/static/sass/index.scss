@@ -1,0 +1,17 @@
+/** 弹框遮罩层 */
+.modal-backdrop{
+    position: fixed;
+    top: 37px;
+    right: 0;
+    bottom: 0;
+    left: 42px;
+    background-color: transparent;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity .15s linear;
+    display:none;
+    &.in{
+        display:block;
+        opacity: .5;
+    }
+}

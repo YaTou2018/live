@@ -1,0 +1,18 @@
+/*客户端桌面共享组件样式*/
+@import './shareCommon.scss';
+
+/*停止共享按钮*/
+.desktop-share-container {
+  @extend %desktop-share-container;
+
+  .screen-share-wrap_button {
+    background-color: #0077FF;
+    color: #fff;
+    &:hover {
+      background: #1D86FF;
+    }
+    &:active {
+      background: #036FEB;
+    }
+  }
+}

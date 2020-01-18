@@ -1,0 +1,30 @@
+$themes: (
+  skin_beyond_default: (
+
+    /*左侧切换按钮*/
+    courseware_left_button-bg:rgba(121, 92, 191, 0.27),
+    tool-icon-bg:#795CBF,
+    tool-icon-color:#fff,
+    tool-icon-bg-active:#fff,
+    tool-icon-color-active:#795CBF,
+    /*搜索框*/
+    searching-input:#C1B3E7,
+    /*添加按钮*/
+    addBtn-color:#FFFFFF,
+    addBtn-border:1px solid #FFFFFF,
+    /*眼睛*/
+
+    /*媒体库播放/暂停*/
+    media-closeIcon:url("../img/play_default.png"),
+    media-closeIcon-hover:url("../img/play_hover.png"),
+    media-closeIcon-active:url("../img/play_press.png"),
+    media-closeIcon-on:url("../img/pause_default.png"),
+    /*课件按文件夹分类,配置项*/
+    classification-bg:rgba(162,145,211,0.3),
+    /*滚动条*/
+    scrollbar-bg:#B6DAFF,
+    /*课件上传样式*/
+    progress-bar-box-bg:rgba(39,43,52,1),
+    progress-bar-bg:rgba(59,153,250,0.8),
+  )
+);

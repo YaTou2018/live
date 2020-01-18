@@ -1,0 +1,81 @@
+/*颜色选择器*/
+$boderColorList:(
+  '000000','9B9B9B','FFFFFF','FF7EA1','FF3B58','FF0000',
+  'F08218','B66700','8F4200','FF7500','FFD100','FFF600',
+  'ABD500','78BC24','2EA937','16B4A4','40C3FF','008DEB',
+  '0043FF','BFC7FF','E352FF','76288B','412088','0F2378'
+);
+$mobile:('E3E4EB','FF0000','56A648','058CE5','D25FFA','000000');
+  .color-picker{
+    width: 198px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 999999;
+    border-radius: 20px 20px 0 0 ;
+    padding:0 3px;
+    @each $i in $boderColorList{
+      .select-color#{unquote($i)}{
+        width: 22px;
+        height: 22px;
+        border: 1px solid rgba(207,210,230,1);
+        margin: 12px 12px 0 0;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+        &.active::after{
+          content: '';
+          width: 26px;
+          height: 26px;
+          border: 3px solid #fff;
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 4px;
+          border:if($i=='FFFFFF', unquote("2px solid  rgba(207,210,230,1)"), unquote("2px solid ##{$i}")) ;
+        }
+        &:nth-of-type(6n+0){
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .mobile{
+    .color-picker{
+      width: 198px;
+      height: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      z-index: 999999;
+      border-radius: 20px 20px 0 0 ;
+      padding:0 3px;
+      @each $i in $mobile{
+        .select-color#{unquote($i)}{
+          width: 20px;
+          height: 20px;
+          border: none!important;
+          // margin: 6px 7px 0 0;
+          position: relative;
+          // background: none!important;
+          
+          cursor: pointer;
+          .color-icon{
+            font-size: 30px;
+          }
+          &.active::after{
+            content: '';
+            border: none!important;
+          }
+          &:nth-of-type(6n+0){
+            margin-right: 0;
+          }
+        }
+      }
+      .select-colorFFFFFF{
+        border: 1px solid #E3E4EB!important;
+        border-radius: 10px!important;
+      }
+    }
+  }

@@ -1,0 +1,173 @@
+@import "../../../styles/common.scss";
+
+.hoster-head {
+    @extend .fl;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background: url(../images/user_head.png) no-repeat;
+    background-size: contain;
+}
+.hoster-nick {
+    // margin-bottom: 4px;
+    // color: #3D3E41;
+}
+// .hoster-time {
+//     color: #ADAEB4;
+// }
+.vote-tag {
+    @extend .fr;
+    display: inline-block;
+    padding: 2px 0px 2px 20px;
+    border-radius: 4px;
+    min-width: 60px;
+    font-size: 12px;
+    color: #FFF;
+    background: url(../images/doing.png) no-repeat;
+    background-size: 5px 5px;
+    background-position: 4px center;
+    background-color: #71DCA4;
+    user-select: none;
+    &.vote-tag2 {
+        display: none;
+    }
+}
+
+
+.vote-desc {
+    margin: 30px 0 20px;
+    padding-left: 2px;
+    font-size: 16px;
+    font-family: PingFangSC;
+    font-weight: 600;
+    color: #3D3E41;
+    >.vote-desc_one{
+        display:flex;
+        text-align:center;
+        vertical-align:middle;
+        >span:nth-child(1){
+            font-size:16px;
+            color:rgba(109,114,120,1);
+            line-height:22px;
+        }
+        >span:nth-child(2){
+            padding:2px 10px;
+            border-radius:15px;
+            background:rgba(130,171,236,1);
+            color:rgba(255,255,255,1);
+            font-size:12px;
+            margin-left:10px;
+            text-align: center;
+        }
+    }
+    >.desc{
+        color: #6D7278;
+        font-size:14px;
+        margin-top:10px;
+    }
+    .desc{
+        font-size: 13px;
+        font-family: PingFangSC;
+        font-weight: 400;
+        color: #94979A;
+        overflow: hidden;
+    }
+}
+
+.mobile-vote {
+    .vote{
+        border-radius: 0;
+        width:100% !important;
+        .voting-res{
+            .vote-scrollBar{
+                max-height: none;
+                min-height: 300px;
+                overflow-y:auto;
+            }
+            .voteBack{
+                width:100%;
+                text-align:center;
+                button{
+                    width:360px;
+                    height:72px;
+                    background:rgba(90,140,220,1);
+                    border-radius:38px;  
+                    font-size:32px;
+                    font-weight:600;
+                    color:rgba(255,232,149,1);
+                    border:3px solid #97B7EB;
+                    box-shadow:2px 2px 4px rgba(0,0,0,.2);
+                    margin-bottom:100px;
+                }
+              
+            }
+        }
+    }
+    .hoster-nick, .hoster-time {
+        width: 180px;
+    }
+    .vote-desc {
+        margin-top: 20px;
+        >div{
+            .vote_name{
+                font-size:36px;
+                font-family:PingFangSC-Medium,PingFang SC;
+                font-weight:500;
+                color:rgba(130,130,130,1);
+                line-height:50px;
+                text-align: left;
+            }
+            .vote_type{
+                min-width:72px;
+                height:40px;
+                background:rgba(222,234,255,1);
+                border-radius:24px;
+                font-size:24px;
+                font-weight:400;
+                color:rgba(130,130,130,1);
+                line-height:37px;
+                margin-left:10px;
+                margin-top:5px;
+            }
+        }
+
+        .desc{
+            font-size:24px;
+        }
+        
+    }
+    .form-group{
+        min-height: 300px;
+    }
+
+    .radio-group{
+        padding:0 60px;
+        box-sizing:border-box;
+        .radio-label{
+            // position: relative;
+        }
+        .radio-label > div{
+            font-size: 32px !important;
+            border-bottom: 1px solid #eee;
+        }
+        .radio-label.selected::before{
+            width:40px;
+            height:40px;
+            // position: absolute;
+            // top: 54%;
+        }
+        .radio-label.selected::after{
+            width:20px;
+            height:20px;
+            position: absolute;
+            top:78%;
+            left:8px;
+        }
+        .form-item {
+            height:100%;
+            overflow-y: auto;
+        }
+    }
+   
+}

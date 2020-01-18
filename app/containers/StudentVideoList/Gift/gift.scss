@@ -1,0 +1,13 @@
+.gift-number{
+  height: 30px;
+  font-size: 20px;
+  color: #FFE895;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  background: url("./img/gift_icon.png") no-repeat left center/20px 20px;
+  .multiply{
+    font-size: 16px;
+    margin: 0 6px 0;
+  }
+}

@@ -1,0 +1,380 @@
+.tool-option_top{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 207px;
+    left: 26px;
+    border-radius:50%;
+    overflow: hidden;
+    background: url(../imgs/huabi1.png) no-repeat center center;
+    background-size:cover;
+    z-index: 98;
+    &.active{
+        background: url(../imgs/huabi2.png) no-repeat center center;
+        background-size:cover;
+    }
+}
+.tools-icon{
+    border: 12px solid;
+    border-color: transparent transparent #FFE895;
+    position: absolute;
+    top: 244px;
+    left: 38px;
+    border-radius:10px;
+    z-index: 98;
+    &.icon_dowm{
+        transform: rotate(180deg);
+        top: 258px;
+    }
+}
+/*工具条*/
+.tool-Bar-container {
+    width: 44px;
+    // height:431px;
+    position: absolute;
+    top: 283px;
+    left: 27px;
+    border-radius: 26px;
+    z-index: 98;
+    background: #5A8CDC;
+    box-shadow:0px 2px 4px #DEEAFF;
+    padding:8px  0;
+    box-sizing:border-box;
+    // .tool_undo,.tool_redo,.tool_clear{
+    //     display:none !important;
+    // }
+    .tool-option {
+        width: 34px;
+        height: 34px;
+        margin: 8px auto;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        em.icon {
+            width: 22px;
+            height: 22px;
+            display: block;
+            font-size: 22px;
+            color: #FFE895;
+            background-image: none !important;
+        }
+        em.icon-more{
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            top: 20px;
+            left:28px;
+            width:6px;
+            height:4px;
+            border-top:5px solid transparent;
+            border-bottom:5px solid transparent;
+            border-right:5px solid #FFE895;
+            transform: rotate(270deg);
+            border-radius:5px;
+            &::before{
+                display: inline-block;
+            }
+        }
+        &.active,&:active {
+            background-color: #336CC7;
+            border-radius:50%;
+            em.icon{
+                font-size:24px;
+            }
+        }
+        &.disabled {
+            em.icon,em.icon-more {
+                opacity: 0.4;
+            }
+        }
+        /* 文字 */
+        &.tool_text {
+            &.active {
+                .font-family-option.active,
+                .font-family-option.active:hover{
+                    color: #FFE895;
+                    border-color: #FFE895;
+                }
+                .font-family-option{
+                    background-color: transparent;
+                    color: #fff;
+                    width: 62px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    border-radius: 4px;
+                    border:1px solid #fff;
+                    &:hover {
+                        color: #FFE895;
+                        border-color: #FFE895;
+                    }
+                }
+            }
+        }
+        /* 图形 */
+        &.shape-list{
+            .shape-option{
+                width: 22px!important;
+                height:22px!important;
+                background-color: transparent;
+                .shape-icon{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    display: inline-block;
+                    transform: translate(0,0);
+                    &:after{
+                        border:none;
+                        background: none;
+                    }
+                }
+            }
+        }
+        /* 橡皮 */
+        &.tool_eraser {
+            .tool-pen-list-extend {
+                top: 18px;
+                border-radius: 18px;
+            }
+        }
+        /* 选框 */
+        .tool-pen-list-extend,
+        .tool-shape-list-extend {
+            width: 260px;
+            position: absolute;
+            top: 70px!important;
+            left:60px!important;
+            padding: 0 16px 10px;
+            border-radius: 24px;
+            overflow: unset;
+            transform: translateY(-50%);
+            box-shadow:0px 3px 13px 0px rgba(75,83,108,0.23);
+            background: #5A8CDC;
+            .icon-jiantou {
+                display: block;
+                width: 7px;
+                height: 20px;
+                position: absolute;
+                left: -7px;
+                top: 25%;
+                transform: translateY(-50%);
+                transform: rotateY(180deg);
+                &::before{
+                    color: #5A8CDC;
+                }
+            }
+        }
+        /*画笔选择器*/
+        .tool-pen-list-extend {
+            &.student {
+                top: 120px;
+                &::after {
+                    top: 18%;
+                }
+            }
+            /*画笔选择*/
+            .pen-option {
+                width: 22px;
+                height:22px;
+                background-color: transparent;
+                /*笔1*/
+                &.tool_pencil{
+                    .icon-tool_pencil{
+                        display: inline-block;
+                        font-size: 30px;
+                        margin: 0 0;
+                    }
+                    &::before{
+                        color: #898b98;
+                    }
+                    &:hover {
+                        .icon-tool_pencil::before{
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                    &.active {
+                        .icon-tool_pencil::before{
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                }
+                /*笔2*/
+                &.tool_highlighter{
+                    .icon-tool_highlighter{
+                        display: inline-block;
+                        font-size: 30px;
+                        margin: 0 0;
+                    }
+                    &:hover {
+                        .icon-tool_highlighter::before {
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                    &.active {
+                        .icon-tool_highlighter::before {
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                }
+                /*笔3*/
+                &.tool_line {
+                    .icon-tool_line{
+                        display: inline-block;
+                        font-size: 30px;
+                        margin: 0 0;
+                    }
+                    &:hover {
+                        .icon-tool_line::before {
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                    &.active {
+                        .icon-tool_line::before {
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                }
+                /*笔4*/
+                &.tool_arrow {
+                    .icon-tool_arrow{
+                        display: inline-block;
+                        font-size: 30px;
+                        margin: 0 0;
+                    }
+                    &:hover {
+                        .icon-tool_arrow::before {
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                    &.active {
+                        .icon-tool_arrow::before {
+                            color: #FFE895;
+                            margin: 0 0;
+                        }
+                    }
+                }
+            }
+        }
+        /*图形选择*/
+        .tool-shape-container{
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size: 100%;
+            .tool_rectangle_empty .icon-tool_rectangle_empty,
+            .tool_rectangle .icon-tool_rectangle,
+            .tool_ellipse_empty .icon-tool_ellipse_empty,
+            .tool_ellipse .icon-tool_ellipse {
+                display: inline-block;
+                font-size: 30px;
+                margin: 0 0;
+            }
+            .tool_rectangle_empty:hover .icon-tool_rectangle_empty::before,
+            .tool_rectangle:hover .icon-tool_rectangle::before,
+            .tool_ellipse_empty:hover .icon-tool_ellipse_empty::before,
+            .tool_ellipse:hover .icon-tool_ellipse::before{
+                color: #FFE895;
+                margin: 0 0;
+            }
+            .tool_rectangle_empty.active .icon-tool_rectangle_empty::before,
+            .tool_rectangle.active .icon-tool_rectangle::before,
+            .tool_ellipse_empty.active .icon-tool_ellipse_empty::before,
+            .tool_ellipse.active .icon-tool_ellipse::before{
+                color: #FFE895;
+                margin: 0 0;
+            }
+        }
+
+        .tool-eraser-extend {
+            width: 242px;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            right: calc(-242px + -20px);
+            border-radius: 24px;
+            overflow: unset;
+            transform: translateY(-50%);
+            box-shadow:0px 3px 13px 0px rgba(75,83,108,0.23);
+            background: #5A8CDC;
+            padding: 0 12px;
+            .icon-jiantou {
+                display: block;
+                width: 7px;
+                height: 20px;
+                position: absolute;
+                left: -6px;
+                top: 35%;
+                transform: translateY(-50%);
+                transform: rotateY(180deg);
+            // background: #5A8CDC;
+            }
+        }
+        &.pen-list .tool-pen-box,
+        &.tool_text .font-container,
+        &.shape-list .tool-shape-container {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: none;
+            padding: 0;
+            margin: 0;
+            border:none;
+            color: #DEEAFF;
+            // border-bottom: 1px solid #B1B4CA;
+            &:before{
+                border:none;
+                // color: #FFE895;
+            }
+        }
+        &.pen-list,
+        &.tool_text,
+        &.shape-list,
+        &.tool_eraser {
+            .tool-slider {
+                height: 45px;
+                background: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+     
+    }
+    .tool-option.tool_eraser{
+        .tool-slider {
+            height: 60px;
+        }
+    }
+}
+.tool-Bar-container{
+    .tool-option.shape-list{
+        .icon:after{
+            border:none!important;
+            background:none!important;
+        }
+    }
+}  
+.tool-Bar-container {
+    .tool-option.shape-list{
+        .shape-option{
+            .shape-icon:after{
+                border:none!important;
+                background:none!important;
+                display: none!important;
+            }
+        } 
+    } 
+}

@@ -1,0 +1,118 @@
+@import "../../../styles/common.scss";
+
+.add-options{
+    padding-left: 26px;
+    width: 100%;
+    height: 40px;
+    line-height: 16px;
+    color: #94979A;
+    font-size: 13px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    margin:20px 0;
+
+    >span:nth-child(1){
+        font-size:14px;
+        color:rgba(90,140,220,1);
+        line-height:40px;
+        margin-right:10px;
+        flex:1;
+    }
+}
+.add-opt-btn {
+    display: inline-block;
+    padding-left: 24px;
+    width:34px;
+    height:34px;
+    line-height: 16px;    
+    color: #1883F1;
+    font-size: 14px;
+    border-radius:50%;
+    box-shadow:0 2px 4px rgba(0,0,0,.2);
+    overflow: hidden;
+    background: url(../images/add_default2.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    &:hover{
+        background: url(../images/add_default.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+.pub-btns {
+    text-align: right;
+    // margin-left: 14px;
+    .btn{
+        width:142px;
+        height:44px;
+        background:rgba(90,140,220,1);
+        border-radius:22px;
+        color: #FFE895;
+        font-size:18px;
+        box-shadow:0 2px 4px rgba(0,0,0,.2);
+        line-height:34px;
+        &:active{
+            background:#336CC7;
+            box-shadow: inset 2px 4px rgba(0,0,0,0.2);
+        }
+    }
+    .btn:nth-child(1) {
+        width:145px;
+        margin-right: 47px;
+        background: #97B7EB;
+        border:4px solid #DEEAFF;
+       height:46px;
+    }
+    .btn:nth-child(2){
+        border:4px solid #97B7EB;
+        background: #5A8CDC;
+
+    }
+}
+
+/* 组件额外样式 */
+.pattern-item {
+    margin-right: 36px;
+}
+.option-item {
+    @extend .fl;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    &.checkbox-label {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        &>div {
+            flex: 1;
+        }
+    }
+    input {
+        width: 370px;
+        &.checkbox-item {
+            margin-right: 9px;
+        }
+    }
+    .rmv-icon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 22px;
+        transform: translateY(-50%);
+        width:10px;
+        height:10px;
+        line-height: 6px;
+        font-size: 20px;
+        text-align: left;
+        color: #A8AEBB;
+        background: url(../images/remove_option.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+        cursor: pointer;
+    }
+    &:hover .rmv-icon{
+        display: inline-block;
+    }
+}
+/* End 组件额外样式 */

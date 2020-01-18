@@ -1,0 +1,36 @@
+.whiteBoard-mobile{
+  width:100%;
+  height:100%;
+  flex: unset!important;
+  position: relative;
+  .ys-media-player-total-control{
+    display:none;
+  }
+  .whiteBoardFull{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    overflow: hidden;
+    background:url(img/max.png) no-repeat center center;
+    background-size:cover;
+    position: absolute;
+    right:36px;
+    z-index:121;
+    bottom:42px;
+    &:active{
+      background:url(img/max_active.png) no-repeat center center;
+      background-size:cover;
+    }
+    &.mp4-full-screen{
+      background:url(img/min.png) no-repeat center center;
+      background-size:cover;
+      &:active{
+        background:url(img/min_active.png) no-repeat center center;
+        background-size:cover;
+      }
+    }
+  }
+  .roadofcloud-sdk-whiteboard .custom-scroll-bar::-webkit-scrollbar{
+    display: none;
+  }
+}

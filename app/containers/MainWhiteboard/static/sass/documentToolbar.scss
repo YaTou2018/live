@@ -1,0 +1,264 @@
+/* 白板翻页工具栏 */
+.mobile, .playback {
+  
+  #defaultDocumentToolViewRoot {
+    bottom: 10px !important;
+  }
+}
+.isSupportPageTrun{
+  #defaultDocumentToolViewRoot {
+    left: 50% !important;
+    top: auto !important;
+    bottom: 1rem ;
+    display: flex !important;
+    transform: translateX(-50%) !important;
+  }
+}
+.noSupportPageTrun{
+  #defaultDocumentToolViewRoot {
+    display: none !important;
+  }
+  // .previous-page-btn, .skip-page-select, .next-page-btn{
+  //   pointer-events: none !important;
+  // }
+  // .previous-page-btn:after{
+  //   background-image: url("../img/disabled/btn_previous_disabled.png") !important;
+  // }
+  // .next-page-btn:after,
+  // .add-page-btn:after{
+  //   background-image: url("../img/disabled/btn_next_disabled.png") !important;
+  // }
+}
+
+.white-board-outer-layout {
+  .document-toolbar-root {
+    height: 40px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    // padding: 30px;
+    box-shadow: 0px 6px 13px 0px rgba(75, 83, 108, 0.23);
+    border: none;
+
+    .document-toolbar-select {
+      .page-info-container {
+        font-size:20px;
+        font-weight:600;
+        color:#5A8CDC;
+        line-height:32px;
+        text-align: center;
+
+        .curr-page, .total-page {
+          width:30px;
+          height:32px;
+          padding: 0;
+        }
+        .curr-page {
+          margin-right: 6px;
+          background:rgba(255,255,255,0.55);
+          border-radius:10px;
+          border: none;
+        }
+        .total-page {
+          margin: 0 10px 0 6px;
+          width:40px;
+        }
+      }
+    }
+
+    .document-toolbar-btn {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn[disabled].document-toolbar-btn.previous-page-btn:after {
+  background-image: url("../img/disabled/btn_previous_disabled.png");
+  opacity: 1;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.previous-page-btn:active::after {
+  background-image: url("../img/hover/btn_previous_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.previous-page-btn:after {
+  width: 18px;
+  height: 23px;
+  background-image: url("../img/default/btn_previous_default.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.add-page-btn:after {
+  width: 18px;
+  height: 23px;
+  background-image: url("../img/default/btn_next_default.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.previous-page-btn:active::after {
+  background-image: url("../img/hover/btn_previous_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.next-page-btn:after {
+  width: 18px;
+  height: 23px;
+  background-image: url("../img/default/btn_next_default.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.next-page-btn:active::after {
+  background-image: url("../img/hover/btn_next_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.add-page-btn:active::after {
+  background-image: url("../img/hover/btn_next_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.next-page-btn:active::after {
+  background-image: url("../img/hover/btn_next_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.add-page-btn:active::after {
+  background-image: url("../img/hover/btn_next_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn[disabled].document-toolbar-btn.next-page-btn:after,
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn[disabled].document-toolbar-btn.add-page-btn:after {
+  background-image: url("../img/disabled/btn_next_disabled.png");
+}
+
+.document-toolbar-root .document-toolbar-btn.next-page-btn:after, .document-toolbar-root .document-toolbar-btn.add-page-btn:after {
+  background-image: url("../img/disabled/btn_next_disabled.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.zoom-big-btn:after {
+  background-image: url("../img/default/btn_add_default.png");
+  width: 40px;
+  height: 40px;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.zoom-big-btn:active::after {
+  background-image: url("../img/hover/btn_add_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.zoom-big-btn:active::after {
+  background-image: url("../img/hover/btn_add_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn[disabled]:after {
+  background-image: url("../img/disabled/btn_add_disabled.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn[disabled].document-toolbar-btn.zoom-small-btn:after {
+  background-image: url("../img/disabled/btn_reduce_disabled.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.zoom-small-btn:after {
+  background-image: url("../img/default/btn_reduce_default.png");
+  width: 40px;
+  height: 40px;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.zoom-small-btn:active::after {
+  background-image: url("../img/hover/btn_reduce_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.zoom-small-btn:active::after {
+  background-image: url("../img/hover/btn_reduce_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.full-screen-btn::after {
+  background-image: url("../img/default/btn_fullScreen_default.png");
+  width: 40px;
+  height: 40px;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.full-screen-btn:active::after {
+  background-image: url("../img/hover/btn_fullScreen_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.full-screen-btn:active::after {
+  background-image: url("../img/hover/btn_fullScreen_hover.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.full-screen-btn.isScreen::after {
+  background-image: url("../img/default/btn_exitFullScreen_default.png");
+  width: 40px;
+  height: 40px;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.full-screen-btn.yes::after {
+  background-image: url("../img/default/btn_exitFullScreen_default.png");
+  width: 40px;
+  height: 40px;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.full-screen-btn.yes:active::after {
+  background-image: url("../img/hover/btn_exitFullScreen_hover.png");
+}
+
+.document-toolbar-root .document-toolbar-btn.volume-btn:after {
+  // background-image: url("../img/beyondDefault/main/default/volume.png");
+  width: 20px;
+  height: 20px;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.volume-btn:active::after {
+  // background-image: url("../img/beyondDefault/main/hover/volume.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.volume-btn:active::after {
+  // background-image: url("../img/beyondDefault/main/active/volume.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.volume-btn.open::after {
+  // background-image: url("../img/beyondDefault/main/active/volume.png");
+}
+
+.document-toolbar-root .document-toolbar-btn.remark-btn:after {
+  // background-image: url("../img/beyondDefault/main/default/remark.png");
+  width: 20px;
+  height: 20px;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.remark-btn.yes:after {
+  // background-image: url("../img/beyondDefault/main/hover/remark.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.remark-btn:active::after {
+  // background-image: url("../img/beyondDefault/main/hover/remark.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.remark-btn:active::after {
+  // background-image: url("../img/beyondDefault/main/active/remark.png");
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.volume-btn .volume-slider-container {
+  background: rgba(24, 17, 57, .5);
+  border-radius: 20px;
+  border: none;
+}
+
+.document-toolbar-root .document-toolbar-btn.volume-btn .volume-slider-container .custom-ys-slider.custom-ys-rc-slider.custom-ys-detection-device .custom-ys-rc-slider-track, .document-toolbar-root .document-toolbar-btn.volume-btn .volume-slider-container .custom-ys-slider.custom-ys-rc-slider.custom-ys-detection-device .custom-ys-rc-slider-handle {
+  background: #FFDC54;
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.volume-btn .volume-slider-container .custom-ys-slider.custom-ys-rc-slider .custom-ys-rc-slider-rail {
+  background: rgba(255, 255, 255, .4);
+}
+
+.white-board-outer-layout .document-toolbar-root .document-toolbar-btn.volume-btn .volume-slider-container .custom-ys-slider.custom-ys-rc-slider.custom-ys-detection-device .custom-ys-rc-slider-handle {
+  border-color: #fff;
+}
+
+#defaultRoadofcloudTotalDocument{
+  /*滚动条*/
+  &::-webkit-scrollbar-thumb{
+      background: #82ABEC;
+      border-radius: 2px;
+  }
+  &::-webkit-scrollbar{
+      background: #DEEAFF;
+      border-radius: 2px;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: #D7EBFF;
+  }
+}

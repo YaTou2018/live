@@ -1,0 +1,41 @@
+.radio-group {
+    overflow: hidden;
+}
+.radio-label {
+    position: relative;
+    display: inline-block;
+    padding-left: 27px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #3D3E41;
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        content: '';
+        width: 40px;
+        height: 40px;
+        background: url('../../images/Form/radio_default.png');
+        background-size: 18px 18px;
+        cursor: pointer;
+    }
+    &.selected::after {
+        position: absolute;
+        top:50%;
+        left: 0;
+        transform: translateY(-50%);
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: #5A8CDC;
+        border-radius: 50%;
+    }
+}
+
+.radio-item {
+    display: none;
+}

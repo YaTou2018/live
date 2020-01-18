@@ -1,0 +1,38 @@
+.checkbox-group {
+   height:auto;
+}
+.checkbox-label {
+    position: relative;
+    display: inline-block;
+    padding-left: 26px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #3D3E41;
+}
+.checkbox-item {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 18px !important;
+    height: 18px;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    border: 2px solid rgba(90,140,220,1);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    &:checked::after{
+        position: absolute;
+        top: -0.02rem;
+        left: 0.016rem;
+        content: '';
+        width: 17px;
+        height: 13px;
+        background: url(../../images/Form/checkbox_selected2.png) no-repeat;
+        background-size: 17px 13px;
+    }
+}

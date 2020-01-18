@@ -1,0 +1,41 @@
+.gift {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 410px;
+    height: 491px;
+    background: url(./images/gift.png) no-repeat center;
+    background-size: contain;
+    z-index: 251;
+}
+@keyframes giftAnimation
+{
+    0% {width: 0; height: 0;}
+    70% {width: 536px; height: 646px;}
+    100% {width: 410px; height: 491px;}
+}
+@-moz-keyframes giftAnimation /* Firefox */
+{
+    0% {width: 0; height: 0;}
+    70% {width: 536px; height: 646px;}
+    100% {width: 410px; height: 491px;}
+}
+@-webkit-keyframes giftAnimation /* Safari 和 Chrome */
+{
+    0% {width: 0; height: 0;}
+    70% {width: 536px; height: 646px;}
+    100% {width: 410px; height: 491px;}
+}
+@-o-keyframes giftAnimation /* Opera */
+{
+    0% {width: 0; height: 0;}
+    70% {width: 536px; height: 646px;}
+    100% {width: 410px; height: 491px;}
+}
+.gift-animation {
+    animation: giftAnimation 1.5s;
+    -moz-animation: giftAnimation 1.5s;	/* Firefox */
+    -webkit-animation: giftAnimation 1.5s;	/* Safari 和 Chrome */
+    -o-animation: giftAnimation 1.5s;	/* Opera */
+}

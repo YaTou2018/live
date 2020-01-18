@@ -1,0 +1,42 @@
+.video-bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  &.teacher-placeholder-bg{
+    background:#EDEDED url("./img/placeholder_bg.png") no-repeat center center/96px 112px;
+  }
+  &.teacher-close-camera{
+    background:#EDEDED url("./img/teacher_close_camera.png") no-repeat center center/83px 101px;
+  }
+  &.teacher-no-camera{
+    background:#EDEDED url("./img/teacher_no_camera.png") no-repeat center center/85px 98px;
+  }
+  .reminder{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    background-color: #CA5B75;
+    padding: 0 11px;
+    color: #fff;
+    border-radius: 13px;
+    margin-bottom: 0.25rem;
+  }
+}
+.mobile-page>.placeholder-bg{
+  .teacher-video-box>.video-bg{
+    background-size: 200px 230px;
+    .reminder{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      color: #fff;
+      border-radius: 20px;
+      font-size: 28px;
+    }
+  }
+}

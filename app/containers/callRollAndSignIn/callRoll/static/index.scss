@@ -1,0 +1,218 @@
+button{
+  border:0;
+  cursor:pointer;
+  margin:0;
+  padding:0;
+  background: transparent;
+}
+:focus {
+  outline: 0;
+}
+ul , li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.call-roll {
+  z-index: 110;
+  height: auto;
+  color: #fff;
+  overflow: hidden;
+  width: 4.28*100px;
+  padding: 0;
+  border-radius: 26px;
+  line-height: .44*100px;
+  font-family: PingFangSC-Regular;
+  font-size: .14*100px;
+
+  .panel-title {
+    height: 50px;
+    text-align: center;
+    font-size:18px;
+    background: #82ABEC;
+
+  }
+  .icon{
+    width:24px;
+    height:24px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .panel-body {
+    width: 100%;
+    max-height: 5.4*100px;
+    overflow-y: auto;
+    // padding: .2*100px .1*100px .1*100px;
+    color: #6D7278;
+    border-radius: 0 0 0.12*100px 0.12*100px;
+    background: #fff;
+    text-align: center;
+    font-size:14px;
+    position: relative;
+    .selectbtn_sanjiao{
+      width: 0;
+      height: 0;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      border-top: 10px solid #5A8CDC;
+      border-radius:10px;
+      position: absolute;
+      top:69px;
+      left: 240px;
+      pointer-events: none;
+      z-index: 9;
+    }
+  }
+
+  select {
+    display: block;
+    margin: .1*100px auto;
+    border-radius:22px;
+    vertical-align: middle;
+    background:#DEEAFF;
+    border:0;
+    outline:0;
+    font-size:18px;
+    color:#6D7278;
+    width: 140px;
+    height: 40px;
+    padding: 0 21px;
+    box-sizing: border-box;
+    appearance: none;
+    position: relative;
+    /* z-index: 1; */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  
+  }
+
+  .choose-time{
+    font-size:18px;
+    color:#6D7278;
+    margin: .1*100px auto;
+    height: .37*100px;
+  }
+
+  .button {
+    width: 148px;
+    height:44px;
+    margin: .2*100px;
+    border-radius: 22px;
+    color: #FFE895;
+    background:#5A8CDC;
+    line-height:30px;
+    border:4px solid #97B7EB;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);  
+    &:active{
+      background:#336CC7;
+      box-shadow:inset 2px 4px 4px rgba(0,0,0,0.2);
+    }
+
+
+  }
+
+  .button-call-rolling {
+    background:#5A8CDC;
+    border:4px solid #97B7EB;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .card-item {
+    width:100%;
+    // margin: .2*100px auto 0;
+    text-align: left;
+    background: #DEEAFF;
+    border-radius: .04*100px;
+    color: rgba(147, 158, 169, 1);
+    line-height: 0.2*100px;
+    padding: 0.14*100px 0 0 0;
+    border-top: 1px solid #fff;
+
+    div {
+      padding: 0 0.14*100px 0.13*100px 0.35*100px;
+    }
+
+    .card-item-line1 {
+      // width:24px;
+      // height: ;
+      padding: 0 0.14*100px 0 25px;
+      margin: 0 0.13*100px 0.13*100px 5px;
+      background: url("./img/call-roll-item-icon.png") no-repeat center left;
+      background-size:24px 24px;
+    }
+
+    .status-pub, .status-finish {
+      border-radius: .02*100px;
+      color: #939EA9;
+      display: inline-block;
+      padding: .02*100px .08*100px;
+      float: right;
+      margin-top: -.02*100px;
+    }
+
+    .status-pub {
+      color: #fff;
+      background:#82ABEC;
+    }
+
+    .act {
+      color: #268EFA;
+    }
+  }
+}
+
+/* 设置body内滚动条样式 */
+.panel-body {
+  scrollbar-base-color: rgba(85, 85, 85, 1);
+  scrollbar-face-color: rgba(103, 100, 103, 0.96);
+  scrollbar-shadow-color: rgba(85, 85, 85, 1);
+  scrollbar-highlight-color: #C3D6DA;
+  scrollbar-3dlight-color: #3D5054;
+  scrollbar-darkshadow-color: #85989C;
+  scrollbar-track-color: rgba(85, 85, 85, 1);
+  scrollbar-arrow-color: rgba(121, 119, 121, 0.92);
+}
+
+/*滚动条整体*/
+.panel-body::-webkit-scrollbar,
+.callroll-list::-webkit-scrollbar {
+  width: 0.06*100px;
+  /*滚动条宽度*/
+}
+
+/*滚动条按钮*/
+.panel-body::-webkit-scrollbar-track,
+.callroll-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.panel-body::-webkit-scrollbar-track-piece,
+.callroll-list::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  /*滑道*/
+  -webkit-border-radius: 0.12*100px;
+  /*滑道圆角宽度*/
+}
+
+.panel-body::-webkit-scrollbar-thumb,
+.callroll-list::-webkit-scrollbar-thumb {
+  background-color: #D7EBFF;
+  /*滑动条表面*/
+  //border: solid 0.01*100px ;
+  /*滑动条边框*/
+  border-radius: 0.12*100px;
+  /*滑动条圆角宽度*/
+}
+
+/*横竖滚动条交角*/
+.panel-body::-webkit-scrollbar-corner,
+.callroll-list::-webkit-scrollbar-corner {
+  background-color: #D7EBFF;
+}

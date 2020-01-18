@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1573195367292'); /* IE9 */
+  src: url('iconfont.eot?t=1573195367292#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQkAAsAAAAACRgAAAPVAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDDAqFaIR5ATYCJAMQCwoABCAFhG0HQRvUBxEVnDPJfiQYN40nm86VrWWGFTWSvgme7/P6zs176aSd/z0U0mOu5PSIrD20ghrjnbFs/2mbM4kL5adFLFJnXfsB78D/GZYAAWH/c7i4samA5rcsl7mWRb0sjQMKaKyhUYJ1IPdOUO+oXRErBE351+E8BAhQkupI+47d+2OjQdMEkKmTJozCbunRM6WCjeAbWauRTZjYxmrjHgs2yp+Xz0Rig4GpQHN7j+8wltZvzbeW8jKeodxI/DgrEG0CBVQHNMjAUXtflI5XRxEo7JqK88M1Am+tTIa3Juc/9l8eCAYKxAeSh1xM/YSCtyZlQeCtjwUD3lp6lIvSn9tANvAfaXxYPVj4MJ0Q8jhlJIS1uY773PxwMukaiUT/UCoVU+m0u+aUd7pC+OTZ+JlAxJLygoRBx8jB8FpKxcg2VJA4aI05uhYqGHs+MD/rTrKMPpRo79xNlTWPpse5+24k0+lUKlE5Fs8fcN7r9yDxqHj/C6lEIvk4PdQNyloMLyBrRMXHIV4gtEYkfp52fvR+2dpLPEoEIrHPjKefxtyF/DK/mNpzJjD2WJt3O56rrThqTsFNuDvUnQlMXnOq0NgN5e7NcftlX/XOLDJOnTIWnSEc0bbIaJ10/EZWrIzLZdwysayhzvgy435YkeFobpc/lW/9QJnxjuWtOJqX5ZZ1syxnXNlxzhUut3r9sJVH786dTUym7q379bj+vmvB/Z7Z7cqWkG/o3L5yt9D+r92DRd936d05v0up0u1zenzubTes9K3H4Z75vYrXaK/dlv1yu5Xsu6sa1apRlUurEmlVpq92psPx/wLhfl5skMyZI4NiVUv1uNejVNUiQy/Pnp0dpSOdqDNbojI7O7LR8Xkuz9U5vtnmNZ4xkjeqjIIm4wCQWaxR3h/nd0gOe3RtRLT5XzuoAXj+udYEKYQVgo0BYMHfRABs0qUIGbTOxZRfFWoGYsHb1xLAIciA3Nm8OUKZBy4GwSbPgoFFCVDYlEdoTHUwCVIffNi0ggDV6LQ5SA7TUIj2A1VZ7oDgcBEMIlwDhcN9hMa8BpN8voIPRxQYTv5d9jy7Vp5uBsIho2SmMuVOEpM7qdI38r4RpimS1D+MLUMUekE39UIHc8QCO+SRc5Kk4ZaezmVoGiZluELqvMI5Ffu+HHuRl3K7OLkxQHAgQxIzUkqxjuSdnVPv+2+Q6zUEM9OwYP8Dwyp7JyFPAEC85B2o4VMGW4NcxHGkP0kyWIs8XSs0OM6IGh9VgZTjKTZElZjvtZJQuXe9sn3DXUAAelpniBItJrs7O8JsbSEMdr1qWGSLBQAAAA==') format('woff2'),
+  url('iconfont.woff?t=1573195367292') format('woff'),
+  url('iconfont.ttf?t=1573195367292') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1573195367292#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-answer:before {
+  content: "\e505";
+}
+
+.icon-share:before {
+  content: "\e506";
+}
+
+.icon-upload:before {
+  content: "\e507";
+}
+

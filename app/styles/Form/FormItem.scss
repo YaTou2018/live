@@ -1,0 +1,26 @@
+@import "../common.scss";
+
+.form-item {
+    margin-bottom: 19px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.form-label {
+    @extend .fl;
+    display: inline-block;
+    margin-right: 8px;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    color: #6D7278;
+    font-size: 14px;
+    text-align: right;
+}
+.form-field {
+    @extend .fl;
+        flex:1;
+    &.no-label {
+        width: 100%;
+    }
+}

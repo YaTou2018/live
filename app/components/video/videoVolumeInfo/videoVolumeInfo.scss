@@ -1,0 +1,89 @@
+.video-info-box{
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  line-height: 40px;
+  padding-left: 10px;
+  color: #fff;
+  background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.62) 100%);
+  .volume-box{
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top:0;
+    display: flex;
+    align-items: center;
+    .volume-icon{
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      display: inline-block;
+      width: 18px;
+      height: 20px;
+      background: url("./img/icon_yinliang@2x.png") no-repeat center/100% 100%;
+      margin-right: 10px;
+      &.volume-close{
+        width: 15px;
+        background: url("./img/icon_yinling_mute2.png") no-repeat center/100% 100%;
+      }
+    }
+    .volume-bar-down{
+      position: absolute;
+      left: 0.3rem;
+      bottom: 6px;
+      width: 36px;
+      max-width: 60px;
+      height: 16px;
+      overflow: hidden;
+    }
+    .volume-bar-item {
+      float: left;
+      margin: 8px 4px 0 0;
+      width: 8px;
+      height: 8px;
+      background: url('./img/yinliangtiao_no.png') no-repeat;
+      background-position: -4px center;
+      background-size: 8px 8px;
+      &:nth-child(2) {
+        margin-top: 4px;
+        height: 12px;
+        background-size: 8px 12px;
+      }
+      &:nth-child(3) {
+        margin-top: 0;
+        height: 16px;
+        background-size: 8px 16px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .volume-up-container {
+      width: 36px;
+      height: 16px;
+    }
+    .volume-bar-up {
+      position: absolute;
+      top: 0;
+      left: 0;
+      // width: 60px;
+      // max-width: 60px;
+      height: 16px;
+      transition: all 0.5s;
+      overflow: hidden;
+      .volume-bar-item {
+        background: url('./img/yinliangtiao_all.png') no-repeat;
+        background-position: -4px center;
+        background-size: 8px 8px;
+        &:nth-child(2) {
+          background-size: 8px 12px;
+        }
+        &:nth-child(3) {
+          background-size: 8px 16px;
+        }
+      }
+    }
+  }
+}

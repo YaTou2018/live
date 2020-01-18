@@ -1,0 +1,148 @@
+.mobile-page>.placeholder-bg{
+  &.four-to-three{
+    height: calc(100vw * 3 / 4);
+    padding-top: 0;
+  }
+  &.sixteen-to-nine{
+    height: calc(100vw * 9 / 16);
+    padding-top: 0;
+  }
+  &.two-rows .mobile.teacher-video-box,&.three-rows .mobile.teacher-video-box{
+    .student-video-list{
+      justify-content: flex-end;
+    }
+  }
+  .mobile.teacher-video-box{
+    transform: none;
+  }
+}
+.mobile.teacher-video-box{
+  width: 100%;
+  height: 100%;
+  background-color: #82ABEC;
+  transition: transform 0.03s;
+  position: absolute;
+  top: 0;
+  // transform: none;
+  &.full-Screen{
+    padding: 0!important;
+    position: fixed;
+    top: 0;
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: left top;
+    z-index: 1;
+    .student-video-list{
+      width:100vw;
+      justify-content:flex-start;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+    .chat-video, .chat-video div{
+      z-index: 2;
+    }
+  }
+  &.full-Screen.rotate-90{
+    width: 100vw!important;
+    height: 100%;
+    transform: none;
+  }
+
+  .student-video-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:row-reverse;
+    flex-wrap: wrap;
+    .student-video {
+      width: 25vw;
+      margin: 0;
+    }
+  }
+  &.overstep-two .student-video-list{
+    justify-content: center;
+  }
+}
+.mobile-page .four-to-three{
+  .mobile.teacher-video-box.overstep-two{
+    &>.chat-video,&>.video-bg,.desktop-share-container{
+      // 100% - 下面学生视频高度
+      height: calc(100% - (25vw * 3 / 4));;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &>.chat-video,&>.video-bg{
+      // （自身高度 - 下面学生视频高度）/视频比例
+      width: calc((100vw * 3 / 4 - (25vw * 3 / 4)) * 4 / 3);
+    }
+  }
+  // 学生视频两排
+  &.two-rows .mobile.teacher-video-box.overstep-two{
+    &>.chat-video,&>.video-bg,.desktop-share-container{
+      // 100% - 下面学生视频高度
+      height: calc(100% - (25vw * 3 / 4 * 2));;
+    }
+    &>.chat-video,&>.video-bg{
+      // （自身高度 - 下面学生视频高度）/视频比例
+      width: calc((100vw * 3 / 4 - (25vw * 3 / 4 * 2)) * 4 / 3);
+    }
+  }
+  // 学生视频三排
+  &.placeholder-bg.three-rows{
+    height: calc((100vw * 3 / 4) + (25vw * 3 / 4));
+    .mobile.teacher-video-box.overstep-two{
+      &>.chat-video,&>.video-bg,.desktop-share-container{
+        // 100% - 下面学生视频高度
+        height: calc(100% - (25vw * 3 / 4 * 3));;
+      }
+      &>.chat-video,&>.video-bg{
+        // （自身高度 - 下面学生视频高度）/视频比例
+        width: calc((100vw * 3 / 4 + (25vw * 3 / 4) - (25vw * 3 / 4 * 3)) * 4 / 3);
+      }
+    }
+  }
+}
+
+.mobile-page .sixteen-to-nine{
+  .mobile.teacher-video-box.overstep-two{
+    &>.chat-video,&>.video-bg,.desktop-share-container{
+      height: calc(100% - (25vw * 9 / 16));;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &>.chat-video,&>.video-bg{
+      width: calc((100vw * 9 / 16 - (25vw * 9 / 16)) * 16 / 9);
+    }
+  }
+  // 学生视频两排
+  &.two-rows .mobile.teacher-video-box.overstep-two{
+    &>.chat-video,&>.video-bg,.desktop-share-container{
+      // 100% - 下面学生视频高度
+      height: calc(100% - (25vw * 9 / 16 * 2));;
+    }
+    &>.chat-video,&>.video-bg{
+      // （自身高度 - 下面学生视频高度）/视频比例
+      width: calc((100vw * 9 / 16 - (25vw * 9 / 16 * 2)) * 16 / 9);
+    }
+  }
+  // 学生视频三排
+  &.placeholder-bg.three-rows{
+    height: calc((100vw * 9 / 16) + (25vw * 9 / 16));
+    .mobile.teacher-video-box.overstep-two{
+      &>.chat-video,&>.video-bg,.desktop-share-container{
+        // 100% - 下面学生视频高度
+        height: calc(100% - (25vw * 9 / 16 * 3));;
+      }
+      &>.chat-video,&>.video-bg{
+        // （自身高度 - 下面学生视频高度）/视频比例
+        width: calc((100vw * 9 / 16 + (25vw * 9 / 16) - (25vw * 9 / 16 * 3)) * 16 / 9);
+      }
+    }
+  }
+}
+

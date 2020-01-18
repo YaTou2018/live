@@ -1,0 +1,135 @@
+button{
+  border:none;
+  cursor:pointer;
+}
+.sign-in {
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width:302px;
+  border-radius: 20px;
+  font-family: PingFangSC-Regular;
+  text-align: center;
+  border-radius:26px;
+  position: relative;
+  .top_option1,.top_option2{
+    width:25px;
+    height: 40px;
+    position: absolute;
+    top:-15px;
+    background:white;
+    border-radius: 20px;
+    border: 5px solid rgba(0,0,0,0.5);
+  }
+  .top_option1{
+    left:25%;
+    margin-left:-15px;;
+  }
+  .top_option2{
+    left:75%;
+    margin-left:-15px;
+
+  }
+  .icon{
+    width:20px;
+    height:20px;
+    position: absolute;
+    top: -.3*100px;
+    right: -.2*100px;
+    cursor: pointer;
+    background:url(../static/img/close.png) no-repeat center;
+    background-size:cover;
+    color: #5A8CDC;
+  }
+  .timer {
+    height: 1.33*100px;
+    margin: .13*100px .06*100px 0;
+    color: #6D7278;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0.050rem solid rgba(0, 0, 0, 0.5);
+    border-bottom: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    div {
+      flex: 1;
+      font-size: .4*100px;
+      font-weight: 600;
+    }
+    span {
+      display: block;
+      padding-bottom: .18*100px;
+      color: #C3C3C3;
+      font-size: .45*100px;
+    }
+  }
+  .button {
+    height: .48*100px;
+    width: 100%;
+    background: #5A8CDC;
+    font-size: .16*100px;
+    color: #fff;
+    border-radius: 0 0 26px 26px;
+    position: relative;
+    &:active{
+      background: #5A8CDC;
+      border:0;
+    }
+  }
+}
+.sign-in-mobile{
+  .signMask{
+    width:100%;
+    position: absolute;
+    top:80px;
+    left:0;
+    bottom:0;
+    background:rgba(0,0,0,.61);
+  }
+  .sign-in{
+      width:55vw;
+      height:30vw;
+      background:rgba(255,255,255,1);
+      box-shadow:0px 4px 8px 0px rgba(0,0,0,0.5);
+      border-radius:48px;
+      padding-top:20px;
+      box-sizing: border-box;
+      z-index:100;
+      top:47%;
+     
+    .icon {
+      width: 30px;
+      height: 30px;
+      top:-28px;
+      right:-28px;;
+      font-size:26px;
+    }
+    .timer {
+      font-size:22px;
+      div:not(.timer-title) {
+        font-size:64px;
+      }
+      span {
+        font-size: 80px;
+      }
+    }
+    .button {
+      height: 80px;
+      font-size:26px;
+      border-radius:0 0 48px 48px ;
+    } 
+
+    .top_option1,.top_option2{
+      width:40px;
+      height:60px;
+      border:6px solid rgba(0,0,0,.61);
+      top:-30px;
+
+    }
+  }
+}

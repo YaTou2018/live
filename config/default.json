@@ -1,0 +1,30 @@
+{
+  "env": "default",
+  "host": "127.0.0.1",
+  "port": "8080",
+  "publicPath": "build",
+  "assetPath": "src/assets",
+  "jsSourcePath": "src/App",
+  "styleSourcePath": "src",
+  "basePath": "src",
+  "contentBase": "dist",
+  "optimization": {
+    "analyzeMode": false,
+    "analyze": {
+      "port": 8888
+    }
+  },
+  "html": {
+    "name": "homepage",
+    "title": "Everything is Awesome",
+    "template": "_default.html",
+    "filename": "index.html"
+  },
+  "browserSync": {
+    "active": true,
+    "port": 3002
+  },
+  "app": {
+    "description": "config inside 'app' will be injected to your frontend code automatically"
+  }
+}

@@ -1,0 +1,22 @@
+.class-btn{
+  width:135px;
+  height:34px;
+  background:#CA5B75;
+  border-radius:20px;
+  color:#FFE895;
+  font-size:16px;
+  font-weight:600;
+  cursor: pointer;
+  border: 3px solid #97B7EB;
+  box-shadow:0px 2px 4px rgba(0,0,0,0.2);
+  margin-top:-4px;
+  &:hover{
+    opacity: 1;
+  }
+}
+.class-btn:active{
+  background:#BD4A65;
+  border-radius:20px;
+  border: 3px solid #97B7EB;
+  box-shadow:inset 2px 2px 5px rgba(0,0,0,.2);
+}

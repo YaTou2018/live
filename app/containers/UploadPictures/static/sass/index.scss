@@ -1,0 +1,32 @@
+.upLoadBox{
+  width:400px;
+  height:390px;
+  border-radius:13px;
+  overflow: hidden;
+  background: #82ABEC;
+  display:flex;
+  flex-direction:column;
+  padding:5px;
+  .qrCode-teachTool-header{
+    width:100%;
+    height:38px;
+    text-align:center;
+    position: relative;
+    font-size:20px;
+    color:white;
+   span{
+      position: absolute;
+      top:5px;
+      right:5px;
+      font-size:25px;
+   }
+  }
+  .upLoadBox_container {
+    flex:1;
+    background: #FFF;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+}

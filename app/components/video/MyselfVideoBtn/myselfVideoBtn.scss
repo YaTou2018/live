@@ -1,0 +1,40 @@
+.myself-video-btn-mask {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.myself-video-btn-mask:hover {
+  button {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 0 20px 20px 20px;
+    cursor: pointer;
+  }
+}
+
+.audio {
+  background: url(./img/btn_mute_default2.png) no-repeat center/100% 100%;
+}
+.audio-mute {
+  background: url(./img/btn_audio_default.png) no-repeat center/100% 100%;
+  
+}
+
+.camera {
+  background: url(./img/btn_camera_default.png) no-repeat center/100% 100%;
+}
+.camera-close {
+  background: url(./img/btn_close_camera_default2.png) no-repeat center/100% 100%;
+}
+
+.exchangevideoBtn {
+  background: url(./img/one2oneExchangeVideo.png) no-repeat center/100% 100%;
+}

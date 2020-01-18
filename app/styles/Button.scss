@@ -1,0 +1,23 @@
+.btn {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 70px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #5E5E5E;
+    background: #EDF1F5;
+    text-align: center;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &.primary {
+        color: #FFF;
+        background: #268EFA;
+    }
+}

@@ -1,0 +1,20 @@
+.idea
+.DS_STORE
+node_modules
+.module-cache
+*.log*
+build
+dist
+src-es5
+.history/
+
+# Cruft
+.DS_Store
+npm-debug.log
+/package-lock.json
+
+
+#dist file/dir
+h5_live*
+/app/public/sdk/yssdkdebug.js
+/.vscode

@@ -1,0 +1,231 @@
+
+.white-board-outer-layout{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #9DBEF3;
+  flex: 1;
+
+  .close-mp4-btn{
+    width:25px;
+    height:25px;
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+    z-index: 121;
+    background:url(../img/closeVideo.png) no-repeat center center/ 100% 100%;
+  }
+  &.mp4-full-screen {
+    .video-mark-container,.big-literally-wrap{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 120;
+      width: 100vh;
+      height: 100vw;
+      max-width:unset;
+      max-height:unset;
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: left top;
+    }
+  }
+  .big-literally-wrap{
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .roadofcloud-drag-parent-container{
+        .document-toolbar-root{
+          width:342px;
+          height:50px;
+          background:rgba(222,234,255,1);
+          border-radius:25px;
+          opacity:0.8;
+          align-items: center;
+          padding-left:46px;
+          padding-right:6px;
+          box-sizing:border-box;
+          .full-screen-btn{
+            order: 0;
+            width: 40px;
+            height: 40px;
+            background:#5A8CDC;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 6px;
+          }
+          .previous-page-btn, .add-page-btn, .next-page-btn {
+            width: 18px;
+            height: 23px;
+          }
+          .previous-page-btn {
+            margin-left: 22px;
+            margin-right: 10px;
+          }
+          .add-page-btn, .next-page-btn {
+            margin-right: 22px;
+          }
+          .zoom-big-btn {
+            margin-right: 20px;
+          }
+        }
+    }
+    .whiteboard-instance-element .lc-drawing textarea{
+      user-select: auto !important;
+    }
+  }
+  .white-board-lay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+.ys-audio-player-container{
+  background:rgba(0,0,0,0);
+}
+
+.ys-media-player-total-control{
+    width:100%;
+    overflow: hidden;
+    height:74px;
+    background:rgba(0,0,0,1);
+    border-radius:38px;
+    opacity:0.6;
+    .media-player-box{
+      width:100%;
+      height:100%;
+      .media-player-icon{
+        display:none;
+      }
+      .media-player-control-container{
+        width:100%;
+        height:100%;
+        display:flex;
+        box-sizing:border-box;
+        >.close-btn{
+          width:28px;
+          height:28px;
+          background:url(../img/closeMusic.png) no-repeat center;
+          background-size:cover;
+        }
+      }
+      .volume-info-container{
+        width:25%;
+        height:100%;
+        margin-left: 20px;
+        .ys-video-player-close-btn{
+            left:0;
+        }
+      }
+      .media-player-info-container{
+        padding-left:13px;
+      }
+    }
+}
+
+// 注释的是ppt和图片切换的类，方便搜索
+#defaultRoadofcloudDynamicPpt_dynamicPptLoading{
+  background: transparent;
+}
+.literally .literally-data-loading-wrap{
+  background: transparent;
+}
+
+.Roadof_loader{
+  background: url(../img/mp4_loading.gif) no-repeat center center !important;
+  background-size: contain !important;
+  width: 25% !important;
+  height: 25% !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%,-50%);
+}
+.Roadof_player>.Roadof_stream_videoSupernatant{
+  background: rgba(0,0,0,0.8);
+}
+.media-player-box .custom-ys-slider.custom-ys-rc-slider .custom-ys-rc-slider-rail {
+  background-color: #9DBEF3;
+  height: 10px;
+}
+.media-player-box .custom-ys-slider.custom-ys-rc-slider.custom-ys-detection-device .custom-ys-rc-slider-handle, .media-player-box .custom-ys-slider.custom-ys-rc-slider.custom-ys-detection-device .custom-ys-rc-slider-track {
+  background: #FFE895;
+  height: 10px;
+}
+.custom-ys-rc-slider-handle{
+  width:17px !important;
+  height:24px !important;
+  background:rgba(157,190,243,1) !important;
+  box-shadow:0px 2px 4px 0px rgba(0,0,0,0.2);
+  border-radius:4px !important;
+  border: 0 !important;
+  margin-top:-6px !important;
+
+}
+.custom-ys-slider.custom-ys-rc-slider .custom-ys-rc-slider-handle {
+  margin-top: -8px;
+}
+.media-player-box .play-pause-btn.play{
+  background-image: url(../img/triangle.png);
+  // top: 50px;
+  width: 32px;
+  height:40px;
+}
+.media-player-box .play-pause-btn.pause{
+  background-image: url(../img/pause.png);
+  height:30px;
+  // top: 59%;
+  width: 32px !important;
+}
+.media-player-box .volume-info-container .volume-icon{
+  background-image: url(../img/volume.png);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  margin-right: 10px;
+  margin-bottom: -8px;
+  margin-top: 10px;
+}
+.media-player-box .volume-info-container .volume-bar-container{
+  height: 10px;
+  margin-top:-3px;
+  
+}
+.media-player-box .volume-info-container .volume-icon.mute{
+  background-image: url(../img/volume.png);
+}
+.media-player-box .media-player-control-container .full-screen-btn{
+  background-image: url(../img/fullScreen.png) !important;
+  margin-top: 4px;
+}
+.ys-media-player-total-control .media-player-box .media-player-info-container{
+  margin-top: -38px;
+  .add-nowrap{
+    margin-top:17px;  
+  }
+  .media-player-time-container{
+    margin-top:15px;
+    >em{
+      font-style: normal;
+     
+    }
+  }
+}
+.ys-video-player-container .ys-video-player-close-btn{
+  display: none;
+}
+.ys-video-player-container .ys-media-player.ys-media-player-total-control-box{
+  bottom: 10px;
+}
+.media-player-box .media-player-name-time-container{
+  align-items: center;
+  font-size:12px;
+ 
+}

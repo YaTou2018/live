@@ -1,0 +1,166 @@
+.student-video-list.two-rows{
+  flex-wrap: wrap;
+  .student-video{
+    width: calc((100vw - 4.22rem) / 8 - 0.05rem);
+    margin-top: 0;
+    .four-to-three .other-video-btn-mask{
+      justify-content: center;
+    }
+  }
+}
+.section .student-video-list.two-rows{
+  padding-top: 0.05rem;
+  justify-content: flex-start;
+}
+.section .student-video-list.video-Layout-box,
+.sidebar .student-video-list.video-Layout-box{
+  position: fixed;
+  top: 0.44rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 0.44rem);
+  z-index: 100;
+  padding: 0 116px 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  .video-Layout{
+    width: 100%;
+    margin: 0;
+    .other-video-btn-mask{
+      justify-content: center;
+      &:hover button{
+        margin: 0.22rem;
+      }
+    }
+  }
+  &.video-width-2,&.video-width-3,&.video-width-4{
+    .video-Layout{
+      width: calc((100% / 2));
+    }
+  }
+  &.video-width-5,&.video-width-6,&.video-width-7,&.video-width-8,&.video-width-9{
+    .video-Layout{
+      width: calc((100% / 3));
+    }
+  }
+  &.video-width-10,&.video-width-11,&.video-width-12,&.video-width-13{
+    .video-Layout{
+      width: calc((100% / 4));
+    }
+  }
+  &.video-width-3 .video-Layout:nth-child(1){
+    margin: 0 calc((100% / 4)) 0;
+  }
+  &.video-width-5{
+    .video-Layout:nth-child(1){
+      margin-left:calc((100% / 6));
+    }
+    .video-Layout:nth-child(2){
+      margin-right:calc((100% / 6));
+    }
+  }
+
+  &.height-cover.four-to-three{
+    // 高度为：视频区高度 / 视频行数
+    // 宽度为：视频区高度 / 视频比例
+    &.video-width-1 .video-Layout{
+      height: calc(100vh - 0.44rem);
+      width: calc((100vh - 0.44rem) * 4 / 3);
+    }
+    &.video-width-3,&.video-width-4,&.video-width-5,&.video-width-6{
+      .video-Layout{
+        height: calc((100vh - 0.44rem) / 2);
+        width: calc(((100vh - 0.44rem) / 2) * 4 / 3);
+      }
+    }
+    &.video-width-7,&.video-width-8,&.video-width-9,&.video-width-10,&.video-width-11,&.video-width-12{
+      .video-Layout{
+        height: calc((100vh - 0.44rem) / 3);
+        width: calc(((100vh - 0.44rem) / 3) * 4 / 3);
+      }
+    }
+    &.video-width-13{
+      .video-Layout{
+        height: calc((100vh - 0.44rem) / 4);
+        width: calc(((100vh - 0.44rem) / 4) * 4 / 3);
+      }
+    }
+    &.video-width-3{ // （100% - 一个视频总宽度） / 2
+      .video-Layout:nth-child(1){
+        margin: 0 calc((100% - ((100vh - 0.44rem) / 2) * 4 / 3) / 2) 0;
+      }
+    }
+    &.video-width-4{ // （100% - 两个视频总宽度） / 2
+      .video-Layout:nth-child(2n){
+        margin-right: calc((100% - (((100vh - 0.44rem) / 2) * 4 / 3) * 2) / 2);
+      }
+      .video-Layout:nth-child(2n-1){
+        margin-left: calc((100% - (((100vh - 0.44rem) / 2) * 4 / 3) * 2) / 2);
+      }
+    }
+    &.video-width-5{ // （100% - 两个视频总宽度） / 2
+      .video-Layout:nth-child(1){
+        margin-left:calc((100% - (((100vh - 0.44rem) / 2) * 4 / 3) * 2) / 2);
+      }
+      .video-Layout:nth-child(2){
+        margin-right:calc((100% - (((100vh - 0.44rem) / 2) * 4 / 3) * 2) / 2);
+      }
+    }
+    &.video-width-7,&.video-width-8,&.video-width-9{ // （100% - 三个视频总宽度） / 2
+      padding-left: calc((100% - ((100vh - 0.44rem) / 3) * 4) / 2);
+      padding-right: calc((100% - ((100vh - 0.44rem) / 3) * 4) / 2);
+    }
+    &.video-width-10,&.video-width-11,&.video-width-12,&.video-width-13{ // （100% - 四个视频总宽度） / 2
+      padding-left: calc((100% - ((100vh - 0.44rem) / 3) * 4 / 3 * 4) / 2);
+      padding-right: calc((100% - ((100vh - 0.44rem) / 3) * 4 / 3 * 4) / 2);
+    }
+    &.video-width-13{ // （100% - 四个视频总宽度） / 2
+      padding-left: calc((100% - ((100vh - 0.44rem) / 4) * 4 / 3 * 4) / 2);
+      padding-right: calc((100% - ((100vh - 0.44rem) / 4) * 4 / 3 * 4) / 2);
+    }
+    &.video-width-1,&.video-width-3,&.video-width-5,&.video-width-6{
+      justify-content: center;
+    }
+  }
+  &.height-cover.sixteen-to-nine{
+    &.video-width-1 .video-Layout{
+      height: calc(100vh - 0.44rem);
+      width: calc((100vh - 0.44rem) * 16 / 9);
+    }
+    &.video-width-3,&.video-width-4{
+      .video-Layout{
+        height: calc((100vh - 0.44rem) / 2);
+        width: calc(((100vh - 0.44rem) / 2) * 16 / 9);
+      }
+    }
+    &.video-width-7,&.video-width-8,&.video-width-9{
+      .video-Layout{
+        height: calc((100vh - 0.44rem) / 3);
+        width: calc(((100vh - 0.44rem) / 3) * 16 / 9);
+      }
+    }
+    &.video-width-13{
+      .video-Layout{
+        height: calc((100vh - 0.44rem) / 4);
+        width: calc(((100vh - 0.44rem) / 4) * 16 / 9);
+      }
+    }
+    &.video-width-3 .video-Layout:nth-child(1){
+      margin: 0 calc(((100vh - 0.44rem) / 2) * 16 / 9 / 2) 0;
+    }
+    &.video-width-7,&.video-width-8{ // （100% - 三个视频总宽度） / 2
+      padding-left: calc((100% - ((100vh - 0.44rem) / 3) * 16 / 3) / 2);
+      padding-right: calc((100% - ((100vh - 0.44rem) / 3) * 16 / 3) / 2);
+    }
+    &.video-width-13{ // （100% - 四个视频总宽度） / 2
+      padding-left: calc((100% - ((100vh - 0.44rem) / 4) * 16 / 9 * 4) / 2);
+      padding-right: calc((100% - ((100vh - 0.44rem) / 4) * 16 / 9 * 4) / 2);
+    }
+    &.video-width-3,&.video-width-4,&.video-width-5,&.video-width-6,&.video-width-9{
+      justify-content: center;
+    }
+  }
+}

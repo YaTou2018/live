@@ -1,0 +1,104 @@
+@import "../../../styles/common.scss";
+
+.winners {
+    padding-top: 122px;
+    width: 380px;
+    height: 550px;
+    background:url(../images/winners.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.winner-tit {
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    font-size: 24px;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: #FFDC88;
+    text-align: center;
+}
+.winner-container {
+    position: relative;
+    margin: 95px auto 0;
+    height: 320px;
+    overflow-y:auto;
+}
+.winner-list {
+    width:355px;
+    height:100%;
+    padding: 16px 0 18px;
+    overflow-y:auto;
+    margin:0 auto;
+    -ms-overflow-style: none; //IE 10+
+    background:#82ABEC;
+    border-radius:20px;
+    box-shadow: 0 4px 2px rgba(0,0,0,.2);
+    box-sizing: border-box;
+    .winner{
+        height:28px;
+        display:flex;
+        justify-content:space-between;
+        background:#5A8CDC;
+        line-height:28px;
+        padding:0 26px;
+        font-size:16px;
+        color:#FFF;
+        span:nth-child(1){
+            width:50%;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        & + .winner {
+            margin-top: 12px;
+        }
+    }
+}
+.winner-list::-webkit-scrollbar
+{
+    width:16px;
+}
+.winner-list::-webkit-scrollbar-thumb
+{
+    border-radius:10px;
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+    background-color:#DEEAFF;
+}
+
+/* 移动端 */
+.mobile-lucky-draw {
+    .lucky-draw {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }     
+    .winners {
+        width: 540px !important;
+        height:780px !important;
+        position: relative;
+        top: -111px;
+        background-size:cover;
+    }
+    .winner-tit {
+        height: 6vw;
+        line-height: 2vw;
+        font-size: 40px;
+    }
+    .winner-container {
+        margin-top: 4vw;
+        height: 31vw;
+    }
+    .winner-list {
+        width: 59vw;
+        // max-height: 31vw;
+        .winner {
+            height: 100px;
+            line-height: 44px;
+            font-size: 28px;
+        }
+    }
+}
+/* 移动端 End */

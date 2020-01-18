@@ -1,0 +1,62 @@
+.answer-creater {
+    margin: 20px auto;
+    width: 540px;
+    overflow: hidden;
+}
+.creater-opts {
+    width: 100%;
+    overflow: hidden;
+}
+.create-opt-item {
+    float: left;
+    margin: 0 81px 41px 0;
+    border-radius: 5px;
+    width: 74px;
+    height: 74px;
+    line-height: 74px;
+    color: #5A8CDC;
+    text-align: center;
+    font-size: 50px;
+    background: #DEEAFF;
+    cursor: pointer;
+    &.selected {
+        background: #5A8CDC;
+        color: #FFE895;
+    }
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+.btns {
+    width: 100%;
+}
+.opt-add-btn, .opt-rmv-btn {
+    margin: 0 50px 22px 0;
+    border-radius: 25px;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: #FFF;
+    background: #C3D9FF;
+}
+.right-opt-desc {
+    width: 100%;
+    font-size: 14px;
+    color: #5A8CDC;
+}
+.answer-commit-btn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #deeaff;
+    border-radius: 20px;
+    width: 148px;
+    height: 40px;
+    line-height: 32px;
+    color: #ffe895;
+    font-size: 18px;
+    text-align: center;
+    background: #5a8cdc;
+}

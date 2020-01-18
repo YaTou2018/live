@@ -1,0 +1,44 @@
+.answer-detail {
+  width: 620px;
+  .detail-list-box{
+    max-height: 254px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+      width: 4px;
+      border-radius: 50%;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: #82abec;
+    }
+  }
+  .nick-name, .selected-answer, .detail-duration {
+    float: left;
+  }
+  .nick-name {
+    width: 250px;
+  }
+  .selected-answer {
+    width: 230px;
+  }
+  .detail-duration {
+    width: 60px;
+    text-align: center;
+  }
+}
+.detail-list-head, .detail-list-item {
+  margin: 0;
+  padding: 0 42px 0 36px;
+  border-radius: 6px;
+  width: 620px;
+  height: 36px;
+  line-height: 36px;
+  color: #FFF;
+  font-size: 14px;
+  background: #82abec;
+}
+.detail-list-item {
+  margin-top: 6px;
+  color: #5A8CDC;
+  background: #DEEAFF;
+}

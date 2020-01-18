@@ -1,0 +1,50 @@
+@import "../../../styles/common.scss";
+
+.voting {
+    &.pub-panel {
+        padding: 30px;
+    }
+    &.form-group {
+        .checkbox-label{
+            height: auto;
+        }
+    }
+    &.pub-btns {
+        text-align: center;
+        .btn {
+            width: 124px;
+            height: 40px;
+        }
+    }
+}
+
+.sub-option-item {
+    margin-bottom: 5px;
+    width: 100%;
+    user-select: none;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    &::before {
+        // margin-left: 12px;
+        // width:18px;
+        // height:18px;
+      
+    }
+    >div{
+        width:100%;
+        border-radius:5px;
+        padding: 0 21px;
+        box-sizing:border-box;
+        margin-left:11px;
+        background:#DEEAFF;
+    }
+    
+}
+
+.pub-btns.voting{
+    .primary{
+        background:#5A8CDC;
+    }
+}
+
